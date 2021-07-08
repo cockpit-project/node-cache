@@ -1,0 +1,69 @@
+{
+  "_from": "@types/d3-force@^1",
+  "_id": "@types/d3-force@1.2.3",
+  "_inBundle": false,
+  "_integrity": "sha512-GjsGMHM7Shofc8UHmrY4SEkrhyLZo+g8K+XwfJ1gex+t3WtPMDjWRxFJF787+gQXGk3JEc0sHihSAkByp3jbBw==",
+  "_location": "/@types/d3-force",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@types/d3-force@^1",
+    "name": "@types/d3-force",
+    "escapedName": "@types%2fd3-force",
+    "scope": "@types",
+    "rawSpec": "^1",
+    "saveSpec": null,
+    "fetchSpec": "^1"
+  },
+  "_requiredBy": [
+    "/@types/d3"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/d3-force/-/d3-force-1.2.3.tgz",
+  "_shasum": "f3720a517db4cc33f93fc50de7b390a7499dccb8",
+  "_spec": "@types/d3-force@^1",
+  "_where": "/home/node/node_modules/@types/d3",
+  "bugs": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Tom Wanzek",
+      "url": "https://github.com/tomwanzek"
+    },
+    {
+      "name": "Alex Ford",
+      "url": "https://github.com/gustavderdrache"
+    },
+    {
+      "name": "Boris Yankov",
+      "url": "https://github.com/borisyankov"
+    },
+    {
+      "name": "denisname",
+      "url": "https://github.com/denisname"
+    },
+    {
+      "name": "Nathan Bierema",
+      "url": "https://github.com/Methuselah96"
+    }
+  ],
+  "dependencies": {},
+  "deprecated": false,
+  "description": "TypeScript definitions for D3JS d3-force module",
+  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-force",
+  "license": "MIT",
+  "main": "",
+  "name": "@types/d3-force",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "directory": "types/d3-force"
+  },
+  "scripts": {},
+  "typeScriptVersion": "3.6",
+  "types": "index.d.ts",
+  "typesPublisherContentHash": "15750f9c2c0f47c86d0218d83341e2b3fc40742d12d351568511ab37537a95a5",
+  "version": "1.2.3"
+}
