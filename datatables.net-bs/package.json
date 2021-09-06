@@ -1,0 +1,74 @@
+{
+  "_from": "datatables.net-bs@>=1.10.9",
+  "_id": "datatables.net-bs@1.11.1",
+  "_inBundle": false,
+  "_integrity": "sha512-r6nhiNKiL94T8gTdShMfCxGCeXG9FxVDRlUEABSJch5OxvAWprm/FuYHXS77woJfDZTbAU87e97efRFiDlb7qw==",
+  "_location": "/datatables.net-bs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "datatables.net-bs@>=1.10.9",
+    "name": "datatables.net-bs",
+    "escapedName": "datatables.net-bs",
+    "rawSpec": ">=1.10.9",
+    "saveSpec": null,
+    "fetchSpec": ">=1.10.9"
+  },
+  "_requiredBy": [
+    "/datatables.net-colreorder-bs"
+  ],
+  "_resolved": "https://registry.npmjs.org/datatables.net-bs/-/datatables.net-bs-1.11.1.tgz",
+  "_shasum": "40b0db039625afb21ec2af2db7b11049943621fd",
+  "_spec": "datatables.net-bs@>=1.10.9",
+  "_where": "/home/node/node_modules/datatables.net-colreorder-bs",
+  "author": {
+    "name": "SpryMedia Ltd",
+    "url": "http://datatables.net"
+  },
+  "bugs": {
+    "url": "https://datatables.net/forums"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "datatables.net": ">=1.10.25",
+    "jquery": ">=1.7"
+  },
+  "deprecated": false,
+  "description": "DataTables for jQuery with styling for [Bootstrap](https://getbootstrap.com/docs/3.3/)",
+  "files": [
+    "css/**/*.css",
+    "js/**/*.js",
+    "types/**/*.d.ts",
+    "images/*"
+  ],
+  "homepage": "https://datatables.net",
+  "ignore": [
+    "composer.json",
+    "datatables.json",
+    "package.json"
+  ],
+  "keywords": [
+    "Bootstrap",
+    "Datatables",
+    "jQuery",
+    "table",
+    "filter",
+    "sort"
+  ],
+  "license": "MIT",
+  "main": "js/dataTables.bootstrap.js",
+  "moduleType": [
+    "globals",
+    "amd",
+    "node"
+  ],
+  "name": "datatables.net-bs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataTables/Dist-DataTables-Bootstrap.git"
+  },
+  "style": "css/dataTables.bootstrap.css",
+  "types": "./types/dataTables.bootstrap.d.ts",
+  "version": "1.11.1"
+}
