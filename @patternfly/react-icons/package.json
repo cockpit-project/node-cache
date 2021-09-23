@@ -1,0 +1,76 @@
+{
+  "_from": "@patternfly/react-icons@^4.11.14",
+  "_id": "@patternfly/react-icons@4.11.17",
+  "_inBundle": false,
+  "_integrity": "sha512-T6HriEy2SgVxlQxPL0FTHQqBYdPbaMeEiK4CzIAPQvCuCT3kRUEEGNyG+VVEvc+XU8ndSiTJdOkHaq08onFvsg==",
+  "_location": "/@patternfly/react-icons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@patternfly/react-icons@^4.11.14",
+    "name": "@patternfly/react-icons",
+    "escapedName": "@patternfly%2freact-icons",
+    "scope": "@patternfly",
+    "rawSpec": "^4.11.14",
+    "saveSpec": null,
+    "fetchSpec": "^4.11.14"
+  },
+  "_requiredBy": [
+    "/@patternfly/react-core",
+    "/@patternfly/react-table"
+  ],
+  "_resolved": "https://registry.npmjs.org/@patternfly/react-icons/-/react-icons-4.11.17.tgz",
+  "_shasum": "61f27cb638f7417734dbc2c0e557760df6e28e5f",
+  "_spec": "@patternfly/react-icons@^4.11.14",
+  "_where": "/home/node/node_modules/@patternfly/react-core",
+  "author": {
+    "name": "Red Hat"
+  },
+  "bugs": {
+    "url": "https://github.com/patternfly/patternfly-react/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "PatternFly 4 Icons as React Components",
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@patternfly/patternfly": "4.135.2",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "rimraf": "^2.6.2",
+    "tslib": "^2.0.0",
+    "typescript": "^4.0.0"
+  },
+  "gitHead": "4c109dca5aa28a74f321d9b44760b5024d5bd1a8",
+  "homepage": "https://github.com/patternfly/patternfly-react#readme",
+  "keywords": [
+    "react",
+    "patternfly"
+  ],
+  "license": "MIT",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@patternfly/react-icons",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patternfly/patternfly-react.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist src/icons src/index.js src/index.d.ts",
+    "generate": "rimraf dist/esm/icons dist/js/icons && node scripts/writeIcons.js"
+  },
+  "sideEffects": false,
+  "types": "dist/esm/index.d.ts",
+  "version": "4.11.17"
+}
