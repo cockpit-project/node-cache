@@ -1,0 +1,68 @@
+{
+  "_from": "@patternfly/react-tokens@^4.12.15",
+  "_id": "@patternfly/react-tokens@4.14.1",
+  "_inBundle": false,
+  "_integrity": "sha512-ck/XJx0raw+xpN0R5a5hXHDV1Os5Z6EMcCphInfKB8dc+R7Ed31onYoVno1ZBXH2Zvtq+mNDf0xTgTk/lPIagg==",
+  "_location": "/@patternfly/react-tokens",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@patternfly/react-tokens@^4.12.15",
+    "name": "@patternfly/react-tokens",
+    "escapedName": "@patternfly%2freact-tokens",
+    "scope": "@patternfly",
+    "rawSpec": "^4.12.15",
+    "saveSpec": null,
+    "fetchSpec": "^4.12.15"
+  },
+  "_requiredBy": [
+    "/@patternfly/react-core",
+    "/@patternfly/react-table"
+  ],
+  "_resolved": "https://registry.npmjs.org/@patternfly/react-tokens/-/react-tokens-4.14.1.tgz",
+  "_shasum": "9343bff181deb53e4e7f878cab82b299100995d1",
+  "_spec": "@patternfly/react-tokens@^4.12.15",
+  "_where": "/home/node/node_modules/@patternfly/react-core",
+  "author": {
+    "name": "Red Hat"
+  },
+  "bugs": {
+    "url": "https://github.com/patternfly/patternfly-react/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "This library provides access to the design tokens of PatternFly 4 from JavaScript",
+  "devDependencies": {
+    "@patternfly/patternfly": "4.144.5",
+    "css": "^2.2.3",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "rimraf": "^2.6.2"
+  },
+  "gitHead": "22b55059379d09343e494079fe32bcecf7a75fc2",
+  "homepage": "https://github.com/patternfly/patternfly-react#readme",
+  "keywords": [
+    "react",
+    "patternfly"
+  ],
+  "license": "MIT",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@patternfly/react-tokens",
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patternfly/patternfly-react.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "generate": "yarn clean && node scripts/writeTokens.js"
+  },
+  "sideEffects": false,
+  "types": "dist/esm/index.d.ts",
+  "version": "4.14.1"
+}
