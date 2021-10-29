@@ -1,0 +1,78 @@
+{
+  "_from": "@patternfly/react-table@4.31.8",
+  "_id": "@patternfly/react-table@4.31.8",
+  "_inBundle": false,
+  "_integrity": "sha512-OLSFWR9cEgC129dM52YUzFrAZHh/Lu/DvFI1KES+/+rXLbEyQ5jqIpHwWcY/Y2Dy4wwekw8bTElYGTr1G3NHLg==",
+  "_location": "/@patternfly/react-table",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@patternfly/react-table@4.31.8",
+    "name": "@patternfly/react-table",
+    "escapedName": "@patternfly%2freact-table",
+    "scope": "@patternfly",
+    "rawSpec": "4.31.8",
+    "saveSpec": null,
+    "fetchSpec": "4.31.8"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@patternfly/react-table/-/react-table-4.31.8.tgz",
+  "_shasum": "4d80e6e9f3730a91076a82c6e46cfb06afcad485",
+  "_spec": "@patternfly/react-table@4.31.8",
+  "_where": "/home/node",
+  "author": {
+    "name": "Red Hat"
+  },
+  "bugs": {
+    "url": "https://github.com/patternfly/patternfly-react/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@patternfly/react-core": "^4.162.3",
+    "@patternfly/react-icons": "^4.13.1",
+    "@patternfly/react-styles": "^4.12.5",
+    "@patternfly/react-tokens": "^4.14.1",
+    "lodash": "^4.17.19",
+    "tslib": "^2.0.0"
+  },
+  "deprecated": false,
+  "description": "This library provides a set of React table components for use with the PatternFly 4",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "typescript": "^4.0.0"
+  },
+  "gitHead": "22b55059379d09343e494079fe32bcecf7a75fc2",
+  "homepage": "https://github.com/patternfly/patternfly-react/tree/main/packages/react-table#readme",
+  "keywords": [
+    "react",
+    "patternfly",
+    "table"
+  ],
+  "license": "MIT",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@patternfly/react-table",
+  "patternfly:src": "src/",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patternfly/patternfly-react.git"
+  },
+  "scripts": {
+    "build:umd": "rollup -c && rollup -c --environment IS_PRODUCTION",
+    "clean": "rimraf dist"
+  },
+  "sideEffects": false,
+  "types": "dist/esm/index.d.ts",
+  "version": "4.31.8"
+}
