@@ -1,0 +1,63 @@
+{
+  "_from": "@patternfly/react-styles@4.19.0",
+  "_id": "@patternfly/react-styles@4.19.0",
+  "_inBundle": false,
+  "_integrity": "sha512-s5UxF3z39o59uLHvO1+QKRfzNguBRFhsc2PTmbZGpLvN+zboVQssUP4fmHND3rgw5ke6lMw/yQdTo3CDjFHmyw==",
+  "_location": "/@patternfly/react-styles",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@patternfly/react-styles@4.19.0",
+    "name": "@patternfly/react-styles",
+    "escapedName": "@patternfly%2freact-styles",
+    "scope": "@patternfly",
+    "rawSpec": "4.19.0",
+    "saveSpec": null,
+    "fetchSpec": "4.19.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@patternfly/react-core",
+    "/@patternfly/react-table"
+  ],
+  "_resolved": "https://registry.npmjs.org/@patternfly/react-styles/-/react-styles-4.19.0.tgz",
+  "_shasum": "0b0d5136d8851013c62f5f3fb4022fdb03e47e73",
+  "_spec": "@patternfly/react-styles@4.19.0",
+  "_where": "/home/node",
+  "author": {
+    "name": "Red Hat"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "CSS-in-JS class maps and utilities for PatternFly.",
+  "devDependencies": {
+    "@patternfly/patternfly": "4.151.4",
+    "camel-case": "^3.0.0",
+    "css": "^2.2.3",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "jsdom": "^15.1.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^4.0.0"
+  },
+  "gitHead": "748b26797124dc5ca4d016e585556de4af8134ba",
+  "license": "MIT",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@patternfly/react-styles",
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "scripts": {
+    "clean": "rimraf dist css",
+    "generate": "rimraf css && node scripts/writeClassMaps.js && node scripts/copyStyles.js"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "types": "dist/esm/index.d.ts",
+  "version": "4.19.0"
+}
