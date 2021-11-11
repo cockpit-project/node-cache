@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`simple fileupload 1`] = `
+<Dropzone
+  multiple={false}
+  noClick={true}
+  onDropAccepted={[Function]}
+  onDropRejected={[Function]}
+>
+  <Component />
+</Dropzone>
+`;
