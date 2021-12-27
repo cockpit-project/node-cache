@@ -1,0 +1,93 @@
+{
+  "_from": "@patternfly/react-core@4.181.1",
+  "_id": "@patternfly/react-core@4.181.1",
+  "_inBundle": false,
+  "_integrity": "sha512-5pt4R8Cg8CkA6xCY4v6wurpwn8WIS8N8NqQEtp56WABMVpZC+TE7k1TSsrDDR1WhJlxsl48VbsANkwMYLlsSJg==",
+  "_location": "/@patternfly/react-core",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@patternfly/react-core@4.181.1",
+    "name": "@patternfly/react-core",
+    "escapedName": "@patternfly%2freact-core",
+    "scope": "@patternfly",
+    "rawSpec": "4.181.1",
+    "saveSpec": null,
+    "fetchSpec": "4.181.1"
+  },
+  "_requiredBy": [
+    "/",
+    "/@patternfly/react-table"
+  ],
+  "_resolved": "https://registry.npmjs.org/@patternfly/react-core/-/react-core-4.181.1.tgz",
+  "_shasum": "ed530532aa16fdad5dda07556cb47b63fdd2157a",
+  "_spec": "@patternfly/react-core@4.181.1",
+  "_where": "/home/node",
+  "author": {
+    "name": "Red Hat"
+  },
+  "bugs": {
+    "url": "https://github.com/patternfly/patternfly-react/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@patternfly/react-icons": "^4.32.1",
+    "@patternfly/react-styles": "^4.31.1",
+    "@patternfly/react-tokens": "^4.33.1",
+    "focus-trap": "6.2.2",
+    "react-dropzone": "9.0.0",
+    "tippy.js": "5.1.2",
+    "tslib": "^2.0.0"
+  },
+  "deprecated": false,
+  "description": "This library provides a set of common React components for use with the PatternFly reference implementation.",
+  "devDependencies": {
+    "@patternfly/patternfly": "4.164.2",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^3.0.0",
+    "css": "^2.2.3",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "rimraf": "^2.6.2",
+    "rollup": "^2.58.0",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "typescript": "^4.0.0"
+  },
+  "gitHead": "bc3dc77b8d33e06e58b2273bc85c2b87e6bda3b5",
+  "homepage": "https://github.com/patternfly/patternfly-react#readme",
+  "keywords": [
+    "react",
+    "patternfly"
+  ],
+  "license": "MIT",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@patternfly/react-core",
+  "patternfly:src": "src/",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patternfly/patternfly-react.git"
+  },
+  "scripts": {
+    "build:umd": "rollup -c && rollup -c --environment IS_PRODUCTION",
+    "clean": "rimraf dist",
+    "generate": "node scripts/copyStyles.js"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "types": "dist/esm/index.d.ts",
+  "version": "4.181.1"
+}
