@@ -1,0 +1,62 @@
+{
+  "_from": "cssnano-preset-lite@^2.0.1",
+  "_id": "cssnano-preset-lite@2.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-TXAnw6dMFo2bRXtw/OpyPEdk3i3Oiem7Z2PQXooluk+9ATBBMLh0avfC6UqLA2QI493GixBl2vnhznX5+eV5Cw==",
+  "_location": "/cssnano-preset-lite",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cssnano-preset-lite@^2.0.1",
+    "name": "cssnano-preset-lite",
+    "escapedName": "cssnano-preset-lite",
+    "rawSpec": "^2.0.1",
+    "saveSpec": null,
+    "fetchSpec": "^2.0.1"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cssnano-preset-lite/-/cssnano-preset-lite-2.1.1.tgz",
+  "_shasum": "2daf27cde25ff98e9dc1e3f8e7598d3456dedfd5",
+  "_spec": "cssnano-preset-lite@^2.0.1",
+  "_where": "/home/node",
+  "bugs": {
+    "url": "https://github.com/cssnano/cssnano/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cssnano-utils": "^3.1.0",
+    "postcss-discard-comments": "^5.1.0",
+    "postcss-discard-empty": "^5.1.0",
+    "postcss-normalize-whitespace": "^5.1.0"
+  },
+  "deprecated": false,
+  "description": "Safe and minimum transformation",
+  "devDependencies": {
+    "postcss": "^8.2.15"
+  },
+  "engines": {
+    "node": "^10 || ^12 || >=14.0"
+  },
+  "files": [
+    "LICENSE-MIT",
+    "src",
+    "types"
+  ],
+  "homepage": "https://github.com/cssnano/cssnano",
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "cssnano-preset-lite",
+  "peerDependencies": {
+    "postcss": "^8.2.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cssnano/cssnano.git"
+  },
+  "scripts": {},
+  "types": "types/index.d.ts",
+  "version": "2.1.1"
+}
