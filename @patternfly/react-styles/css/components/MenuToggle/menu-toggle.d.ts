@@ -1,0 +1,24 @@
+import './menu-toggle.css';
+declare const _default: {
+  "check": "pf-c-check",
+  "menuToggle": "pf-c-menu-toggle",
+  "menuToggleButton": "pf-c-menu-toggle__button",
+  "menuToggleControls": "pf-c-menu-toggle__controls",
+  "menuToggleCount": "pf-c-menu-toggle__count",
+  "menuToggleIcon": "pf-c-menu-toggle__icon",
+  "menuToggleText": "pf-c-menu-toggle__text",
+  "menuToggleToggleIcon": "pf-c-menu-toggle__toggle-icon",
+  "modifiers": {
+    "primary": "pf-m-primary",
+    "secondary": "pf-m-secondary",
+    "expanded": "pf-m-expanded",
+    "plain": "pf-m-plain",
+    "text": "pf-m-text",
+    "disabled": "pf-m-disabled",
+    "fullHeight": "pf-m-full-height",
+    "splitButton": "pf-m-split-button",
+    "action": "pf-m-action",
+    "active": "pf-m-active"
+  }
+};
+export default _default;

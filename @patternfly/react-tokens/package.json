@@ -1,0 +1,68 @@
+{
+  "_from": "@patternfly/react-tokens@^4.50.19",
+  "_id": "@patternfly/react-tokens@4.50.19",
+  "_inBundle": false,
+  "_integrity": "sha512-wbUPb8welJ8p+OjXrc0X3UYDj5JjN9xnfpYkZdAySpcFtk0BAn5Py6UEZCjKtw7XHHfCQ1zwKXpXDShcu/5KVQ==",
+  "_location": "/@patternfly/react-tokens",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@patternfly/react-tokens@^4.50.19",
+    "name": "@patternfly/react-tokens",
+    "escapedName": "@patternfly%2freact-tokens",
+    "scope": "@patternfly",
+    "rawSpec": "^4.50.19",
+    "saveSpec": null,
+    "fetchSpec": "^4.50.19"
+  },
+  "_requiredBy": [
+    "/@patternfly/react-core",
+    "/@patternfly/react-table"
+  ],
+  "_resolved": "https://registry.npmjs.org/@patternfly/react-tokens/-/react-tokens-4.50.19.tgz",
+  "_shasum": "7619830e7ad70853e54819b37e196c85ed604f21",
+  "_spec": "@patternfly/react-tokens@^4.50.19",
+  "_where": "/home/node/node_modules/@patternfly/react-core",
+  "author": {
+    "name": "Red Hat"
+  },
+  "bugs": {
+    "url": "https://github.com/patternfly/patternfly-react/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "This library provides access to the design tokens of PatternFly 4 from JavaScript",
+  "devDependencies": {
+    "@patternfly/patternfly": "4.183.1",
+    "css": "^2.2.3",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.2",
+    "rimraf": "^2.6.2"
+  },
+  "gitHead": "5b472303da22cb9c67e9977b3933f6576c27ac01",
+  "homepage": "https://github.com/patternfly/patternfly-react#readme",
+  "keywords": [
+    "react",
+    "patternfly"
+  ],
+  "license": "MIT",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "name": "@patternfly/react-tokens",
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patternfly/patternfly-react.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "generate": "yarn clean && node scripts/writeTokens.js"
+  },
+  "sideEffects": false,
+  "types": "dist/esm/index.d.ts",
+  "version": "4.50.19"
+}
