@@ -1,0 +1,13 @@
+import('./toggle-group.css');
+export default {
+  "modifiers": {
+    "compact": "pf-m-compact",
+    "selected": "pf-m-selected",
+    "disabled": "pf-m-disabled"
+  },
+  "toggleGroup": "pf-c-toggle-group",
+  "toggleGroupButton": "pf-c-toggle-group__button",
+  "toggleGroupIcon": "pf-c-toggle-group__icon",
+  "toggleGroupItem": "pf-c-toggle-group__item",
+  "toggleGroupText": "pf-c-toggle-group__text"
+};
