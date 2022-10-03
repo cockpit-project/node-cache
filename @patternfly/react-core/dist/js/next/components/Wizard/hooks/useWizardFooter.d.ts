@@ -1,0 +1,9 @@
+import React from 'react';
+import { DefaultWizardFooterProps } from '../types';
+/**
+ * Set a unique footer for the wizard. stepId is only required if inactive steps are hidden instead of unmounted.
+ * @param footer
+ * @param stepId
+ */
+export declare const useWizardFooter: (footer: DefaultWizardFooterProps | React.ReactElement, stepId?: string | number) => void;
+//# sourceMappingURL=useWizardFooter.d.ts.map
