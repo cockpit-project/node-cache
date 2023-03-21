@@ -1,0 +1,50 @@
+{
+  "name": "esbuild-plugin-eslint",
+  "version": "0.3.5",
+  "description": "Lint your esbuild bundles with ESLint. 🧐",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/robinloeffel/esbuild-plugin-eslint.git",
+  "homepage": "https://github.com/robinloeffel/esbuild-plugin-eslint",
+  "bugs": "https://github.com/robinloeffel/esbuild-plugin-eslint/issues",
+  "author": "Robin Löffel (https://robinloeffel.ch) <hi@robinloeffel.ch>",
+  "license": "MIT",
+  "keywords": [
+    "esbuild",
+    "plugin",
+    "esbuild-plugin",
+    "eslint",
+    "lint"
+  ],
+  "files": [
+    "source",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/eslint": "^8.21.3",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.17.12",
+    "eslint": "^8.36.0",
+    "eslint-config-sweet": "^11.0.2",
+    "husky": "^8.0.3"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.17.12",
+    "eslint": "^8.36.0"
+  },
+  "scripts": {
+    "start": "yarn build && yarn watch",
+    "build": "rm -rf dist && tsc",
+    "watch": "concurrently 'yarn watch:source' 'yarn watch:test'",
+    "watch:source": "chokidar 'source/**/*' -c 'yarn build'",
+    "watch:test": "chokidar 'test/**/*' -c 'node test/esbuild'",
+    "prepublish": "yarn build"
+  }
+}
