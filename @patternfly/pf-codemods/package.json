@@ -1,0 +1,24 @@
+{
+  "name": "@patternfly/pf-codemods",
+  "version": "1.53.10",
+  "description": "Codemods for v4 breaking change release 2020.07",
+  "author": "Red Hat",
+  "license": "MIT",
+  "bin": {
+    "pf-codemods": "./index.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@patternfly/eslint-plugin-pf-codemods": "^1.53.8",
+    "@typescript-eslint/parser": "^5.58.0",
+    "commander": "^5.1.0",
+    "eslint": "^7.3.0 || ^8.29.0",
+    "typescript": "^3.8.3"
+  },
+  "gitHead": "a9b3562084ae410cc0b4fd06b1d32a56601592a5"
+}
