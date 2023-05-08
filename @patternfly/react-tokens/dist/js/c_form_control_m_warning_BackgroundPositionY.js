@@ -1,0 +1,8 @@
+"use strict";
+exports.__esModule = true;
+exports.c_form_control_m_warning_BackgroundPositionY = {
+  "name": "--pf-v5-c-form-control--m-warning--BackgroundPositionY",
+  "value": "0.5rem",
+  "var": "var(--pf-v5-c-form-control--m-warning--BackgroundPositionY)"
+};
+exports["default"] = exports.c_form_control_m_warning_BackgroundPositionY;
