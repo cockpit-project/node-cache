@@ -1,0 +1,288 @@
+.pf-v5-c-form-control {
+  --pf-v5-global--Color--100: var(--pf-v5-global--Color--dark-100);
+  --pf-v5-global--Color--200: var(--pf-v5-global--Color--dark-200);
+  --pf-v5-global--BorderColor--100: var(--pf-v5-global--BorderColor--dark-100);
+  --pf-v5-global--primary-color--100: var(--pf-v5-global--primary-color--dark-100);
+  --pf-v5-global--link--Color: var(--pf-v5-global--link--Color--dark);
+  --pf-v5-global--link--Color--hover: var(--pf-v5-global--link--Color--dark--hover);
+  --pf-v5-global--BackgroundColor--100: var(--pf-v5-global--BackgroundColor--light-100);
+}
+
+.pf-v5-c-form-control {
+  --pf-v5-c-form-control--ColumnGap: var(--pf-v5-global--spacer--sm);
+  --pf-v5-c-form-control--Color: var(--pf-v5-global--Color--100);
+  --pf-v5-c-form-control--FontSize: var(--pf-v5-global--FontSize--md);
+  --pf-v5-c-form-control--LineHeight: var(--pf-v5-global--LineHeight--md);
+  --pf-v5-c-form-control--Resize: none;
+  --pf-v5-c-form-control--BorderWidth: var(--pf-v5-global--BorderWidth--sm);
+  --pf-v5-c-form-control--BorderTopColor: var(--pf-v5-global--BorderColor--300);
+  --pf-v5-c-form-control--BorderRightColor: var(--pf-v5-global--BorderColor--300);
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-global--BorderColor--200);
+  --pf-v5-c-form-control--BorderLeftColor: var(--pf-v5-global--BorderColor--300);
+  --pf-v5-c-form-control--BorderRadius: 0;
+  --pf-v5-c-form-control--BackgroundColor: var(--pf-v5-global--BackgroundColor--100);
+  --pf-v5-c-form-control--Width: 100%;
+  --pf-v5-c-form-control--Height: calc(var(--pf-v5-c-form-control--FontSize) * var(--pf-v5-c-form-control--LineHeight) + var(--pf-v5-c-form-control--BorderWidth) * 2 + var(--pf-v5-c-form-control--PaddingTop) + var(--pf-v5-c-form-control--PaddingBottom));
+  --pf-v5-c-form-control--inset--base: var(--pf-v5-global--spacer--sm);
+  --pf-v5-c-form-control--PaddingTop: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-global--BorderWidth--sm));
+  --pf-v5-c-form-control--PaddingBottom: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-global--BorderWidth--sm));
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--inset--base);
+  --pf-v5-c-form-control--PaddingLeft: var(--pf-v5-c-form-control--inset--base);
+  --pf-v5-c-form-control--hover--BorderBottomColor: var(--pf-v5-global--primary-color--100);
+  --pf-v5-c-form-control--focus--BorderBottomWidth: var(--pf-v5-global--BorderWidth--md);
+  --pf-v5-c-form-control--focus--PaddingBottom: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-c-form-control--focus--BorderBottomWidth));
+  --pf-v5-c-form-control--focus--BorderBottomColor: var(--pf-v5-global--primary-color--100);
+  --pf-v5-c-form-control--m-expanded--BorderBottomWidth: var(--pf-v5-global--BorderWidth--md);
+  --pf-v5-c-form-control--m-expanded--PaddingBottom: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-c-form-control--focus--BorderBottomWidth));
+  --pf-v5-c-form-control--m-expanded--BorderBottomColor: var(--pf-v5-global--primary-color--100);
+  --pf-v5-c-form-control--m-placeholder--Color: var(--pf-v5-global--Color--dark-200);
+  --pf-v5-c-form-control--m-placeholder--child--Color: var(--pf-v5-global--Color--100);
+  --pf-v5-c-form-control--m-disabled--Color: var(--pf-v5-global--disabled-color--100);
+  --pf-v5-c-form-control--m-disabled--BackgroundColor: var(--pf-v5-global--disabled-color--300);
+  --pf-v5-c-form-control--m-disabled--BorderColor: transparent;
+  --pf-v5-c-form-control--m-readonly--BackgroundColor: var(--pf-v5-global--disabled-color--300);
+  --pf-v5-c-form-control--m-readonly--hover--BorderBottomColor: var(--pf-v5-global--BorderColor--200);
+  --pf-v5-c-form-control--m-readonly--focus--PaddingBottom: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-global--BorderWidth--sm));
+  --pf-v5-c-form-control--m-readonly--focus--BorderBottomWidth: var(--pf-v5-global--BorderWidth--sm);
+  --pf-v5-c-form-control--m-readonly--focus--BorderBottomColor: var(--pf-v5-global--BorderColor--200);
+  --pf-v5-c-form-control--m-readonly--m-plain--BackgroundColor: transparent;
+  --pf-v5-c-form-control--m-readonly--m-plain--inset--base: 0;
+  --pf-v5-c-form-control--m-success--BorderBottomWidth: var(--pf-v5-global--BorderWidth--md);
+  --pf-v5-c-form-control--m-success--PaddingBottom: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-c-form-control--m-success--BorderBottomWidth));
+  --pf-v5-c-form-control--m-success--BorderBottomColor: var(--pf-v5-global--success-color--100);
+  --pf-v5-c-form-control--m-success--PaddingRight: var(--pf-v5-global--spacer--xl);
+  --pf-v5-c-form-control--m-warning--BorderBottomWidth: var(--pf-v5-global--BorderWidth--md);
+  --pf-v5-c-form-control--m-warning--PaddingBottom: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-c-form-control--m-warning--BorderBottomWidth));
+  --pf-v5-c-form-control--m-warning--BorderBottomColor: var(--pf-v5-global--warning-color--100);
+  --pf-v5-c-form-control--m-warning--PaddingRight: var(--pf-v5-global--spacer--xl);
+  --pf-v5-c-form-control--m-error--BorderBottomWidth: var(--pf-v5-global--BorderWidth--md);
+  --pf-v5-c-form-control--m-error--PaddingBottom: calc(var(--pf-v5-global--spacer--form-element) - var(--pf-v5-c-form-control--m-error--BorderBottomWidth));
+  --pf-v5-c-form-control--m-error--BorderBottomColor: var(--pf-v5-global--danger-color--100);
+  --pf-v5-c-form-control--m-error--PaddingRight: var(--pf-v5-global--spacer--xl);
+  --pf-v5-c-form-control--m-error--IconWidth: var(--pf-v5-c-form-control--FontSize);
+  --pf-v5-c-form-control--m-icon--PaddingRight: calc(var(--pf-v5-c-form-control--inset--base) + var(--pf-v5-c-form-control--m-icon--IconWidth) + var(--pf-v5-c-form-control--m-icon--icon--spacer));
+  --pf-v5-c-form-control--m-icon--IconWidth: var(--pf-v5-c-form-control--FontSize);
+  --pf-v5-c-form-control--m-icon--icon--spacer: var(--pf-v5-global--spacer--sm);
+  --pf-v5-c-form-control--m-icon--icon--PaddingRight: calc(var(--pf-v5-c-form-control--inset--base) + var(--pf-v5-c-form-control--m-error--IconWidth) + var(--pf-v5-c-form-control--m-icon--icon--spacer) + var(--pf-v5-c-form-control--m-icon--IconWidth) + var(--pf-v5-c-form-control--m-icon--icon--spacer));
+  --pf-v5-c-form-control__select--PaddingRight: calc(var(--pf-v5-global--spacer--lg) + var(--pf-v5-c-form-control--BorderWidth) + var(--pf-v5-c-form-control--BorderWidth));
+  --pf-v5-c-form-control__select--PaddingLeft: calc(var(--pf-v5-global--spacer--sm) - var(--pf-v5-c-form-control--BorderWidth));
+  --pf-v5-c-form-control__select--m-success--m-status--PaddingRight: var(--pf-v5-global--spacer--3xl);
+  --pf-v5-c-form-control__select--m-warning--m-status--PaddingRight: var(--pf-v5-global--spacer--3xl);
+  --pf-v5-c-form-control__select--m-error--m-status--PaddingRight: var(--pf-v5-global--spacer--3xl);
+  --pf-v5-c-form-control--textarea--Width: var(--pf-v5-c-form-control--Width);
+  --pf-v5-c-form-control--textarea--Height: auto;
+  --pf-v5-c-form-control__icon--Color: var(--pf-v5-global--icon--Color--light);
+  --pf-v5-c-form-control__icon--m-status--Color: var(--pf-v5-global--icon--Color--light);
+  --pf-v5-c-form-control--m-success__icon--m-status--Color: var(--pf-v5-global--success-color--100);
+  --pf-v5-c-form-control--m-warning__icon--m-status--Color: var(--pf-v5-global--warning-color--100);
+  --pf-v5-c-form-control--m-error__icon--m-status--Color: var(--pf-v5-global--danger-color--100);
+  --pf-v5-c-form-control__icon--Height: calc(var(--pf-v5-c-form-control--Height) - (2 * var(--pf-v5-c-form-control--BorderWidth)));
+  --pf-v5-c-form-control__utilities--Gap: var(--pf-v5-global--spacer--sm);
+  --pf-v5-c-form-control__utilities--PaddingTop: var(--pf-v5-c-form-control--inset--base);
+  --pf-v5-c-form-control__utilities--PaddingRight: var(--pf-v5-c-form-control--inset--base);
+  --pf-v5-c-form-control__toggle-icon--PaddingRight: var(--pf-v5-c-form-control--inset--base);
+  --pf-v5-c-form-control__toggle-icon--PaddingLeft: var(--pf-v5-c-form-control--inset--base);
+  --pf-v5-c-form-control__toggle-icon--Height: calc(var(--pf-v5-c-form-control--Height) - (2 * var(--pf-v5-c-form-control--BorderWidth)));
+  --pf-v5-c-form-control__toggle-icon--Color: var(--pf-v5-global--Color--100);
+  --pf-v5-c-form-control--m-disabled__toggle-icon--Color: var(--pf-v5-global--disabled-color--100);
+  color: var(--pf-v5-c-form-control--Color);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: var(--pf-v5-c-form-control--ColumnGap);
+  align-items: start;
+  width: var(--pf-v5-c-form-control--Width);
+  font-size: var(--pf-v5-c-form-control--FontSize);
+  line-height: var(--pf-v5-c-form-control--LineHeight);
+  resize: var(--pf-v5-c-form-control--Resize);
+  background-color: var(--pf-v5-c-form-control--BackgroundColor);
+  border: var(--pf-v5-c-form-control--BorderWidth) solid;
+  border-color: var(--pf-v5-c-form-control--BorderTopColor) var(--pf-v5-c-form-control--BorderRightColor) var(--pf-v5-c-form-control--BorderBottomColor) var(--pf-v5-c-form-control--BorderLeftColor);
+  border-radius: var(--pf-v5-c-form-control--BorderRadius);
+}
+.pf-v5-c-form-control > :is(input, select, textarea) {
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  padding: var(--pf-v5-c-form-control--PaddingTop) var(--pf-v5-c-form-control--PaddingRight) var(--pf-v5-c-form-control--PaddingBottom) var(--pf-v5-c-form-control--PaddingLeft);
+  color: var(--pf-v5-c-form-control--Color);
+  background-color: transparent;
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.pf-v5-c-form-control > ::placeholder {
+  color: var(--pf-v5-c-form-control--m-placeholder--Color);
+}
+.pf-v5-c-form-control > :is(input, select) {
+  text-overflow: ellipsis;
+}
+.pf-v5-c-form-control.pf-m-readonly {
+  --pf-v5-c-form-control--BackgroundColor: var(--pf-v5-c-form-control--m-readonly--BackgroundColor);
+}
+.pf-v5-c-form-control.pf-m-readonly:not(.pf-m-success, .pf-m-warning, .pf-m-error):hover {
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-c-form-control--m-readonly--hover--BorderBottomColor);
+}
+.pf-v5-c-form-control.pf-m-readonly:not(.pf-m-success, .pf-m-warning, .pf-m-error):focus {
+  --pf-v5-c-form-control--focus--PaddingBottom: var(--pf-v5-c-form-control--m-readonly--focus--PaddingBottom);
+  --pf-v5-c-form-control--focus--BorderBottomWidth: var(--pf-v5-c-form-control--m-readonly--focus--BorderBottomWidth);
+  --pf-v5-c-form-control--focus--BorderBottomColor: var(--pf-v5-c-form-control--m-readonly--focus--BorderBottomColor);
+}
+.pf-v5-c-form-control.pf-m-readonly.pf-m-plain {
+  --pf-v5-c-form-control--m-readonly--BackgroundColor: var(--pf-v5-c-form-control--m-readonly--m-plain--BackgroundColor);
+  --pf-v5-c-form-control--inset--base: var(--pf-v5-c-form-control--m-readonly--m-plain--inset--base);
+  border-color: transparent;
+}
+.pf-v5-c-form-control:hover {
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-c-form-control--hover--BorderBottomColor);
+}
+.pf-v5-c-form-control:focus {
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-c-form-control--focus--BorderBottomColor);
+  --pf-v5-c-form-control__icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--focus--BorderBottomWidth));
+  --pf-v5-c-form-control__toggle-icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--focus--BorderBottomWidth));
+  --pf-v5-c-form-control--PaddingBottom: var(--pf-v5-c-form-control--focus--PaddingBottom);
+  border-bottom-width: var(--pf-v5-c-form-control--focus--BorderBottomWidth);
+}
+.pf-v5-c-form-control.pf-m-expanded {
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-c-form-control--m-expanded--BorderBottomColor);
+  --pf-v5-c-form-control__icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-expanded--BorderBottomWidth));
+  --pf-v5-c-form-control__toggle-icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-expanded--BorderBottomWidth));
+  --pf-v5-c-form-control--PaddingBottom: var(--pf-v5-c-form-control--m-expanded--PaddingBottom);
+  border-bottom-width: var(--pf-v5-c-form-control--m-expanded--BorderBottomWidth);
+}
+.pf-v5-c-form-control.pf-m-disabled {
+  --pf-v5-c-form-control--BackgroundColor: var(--pf-v5-c-form-control--m-disabled--BackgroundColor);
+  --pf-v5-c-form-control--Color: var(--pf-v5-c-form-control--m-disabled--Color);
+  --pf-v5-c-form-control__toggle-icon--Color: var(--pf-v5-c-form-control--m-disabled__toggle-icon--Color);
+  cursor: not-allowed;
+  border-color: var(--pf-v5-c-form-control--m-disabled--BorderColor);
+}
+.pf-v5-c-form-control.pf-m-error {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--m-error--PaddingRight);
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-c-form-control--m-error--BorderBottomColor);
+  --pf-v5-c-form-control__icon--m-status--Color: var(--pf-v5-c-form-control--m-error__icon--m-status--Color);
+  --pf-v5-c-form-control__icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-error--BorderBottomWidth));
+  --pf-v5-c-form-control__toggle-icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-error--BorderBottomWidth));
+  --pf-v5-c-form-control--PaddingBottom: var(--pf-v5-c-form-control--m-error--PaddingBottom);
+  --pf-v5-c-form-control__select--PaddingRight: var(--pf-v5-c-form-control__select--m-error--m-status--PaddingRight);
+  border-bottom-width: var(--pf-v5-c-form-control--m-error--BorderBottomWidth);
+}
+.pf-v5-c-form-control.pf-m-error.pf-m-icon {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--m-icon--icon--PaddingRight);
+}
+.pf-v5-c-form-control.pf-m-success {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--m-success--PaddingRight);
+  --pf-v5-c-form-control--PaddingBottom: var(--pf-v5-c-form-control--m-success--PaddingBottom);
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-c-form-control--m-success--BorderBottomColor);
+  --pf-v5-c-form-control__icon--m-status--Color: var(--pf-v5-c-form-control--m-success__icon--m-status--Color);
+  --pf-v5-c-form-control__icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-success--BorderBottomWidth));
+  --pf-v5-c-form-control__toggle-icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-success--BorderBottomWidth));
+  --pf-v5-c-form-control__select--PaddingRight: var(--pf-v5-c-form-control__select--m-success--m-status--PaddingRight);
+  border-bottom-width: var(--pf-v5-c-form-control--m-success--BorderBottomWidth);
+}
+.pf-v5-c-form-control.pf-m-success.pf-m-icon {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--m-icon--icon--PaddingRight);
+}
+.pf-v5-c-form-control.pf-m-warning {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--m-warning--PaddingRight);
+  --pf-v5-c-form-control--PaddingBottom: var(--pf-v5-c-form-control--m-warning--PaddingBottom);
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-c-form-control--m-warning--BorderBottomColor);
+  --pf-v5-c-form-control__icon--m-status--Color: var(--pf-v5-c-form-control--m-warning__icon--m-status--Color);
+  --pf-v5-c-form-control__icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-warning--BorderBottomWidth));
+  --pf-v5-c-form-control__toggle-icon--Height: calc(var(--pf-v5-c-form-control--Height) - var(--pf-v5-c-form-control--m-warning--BorderBottomWidth));
+  --pf-v5-c-form-control__select--PaddingRight: var(--pf-v5-c-form-control__select--m-warning--m-status--PaddingRight);
+  border-bottom-width: var(--pf-v5-c-form-control--m-warning--BorderBottomWidth);
+}
+.pf-v5-c-form-control.pf-m-warning.pf-m-icon {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--m-icon--icon--PaddingRight);
+}
+.pf-v5-c-form-control.pf-m-icon {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control--m-icon--PaddingRight);
+}
+.pf-v5-c-form-control > select {
+  --pf-v5-c-form-control--PaddingRight: var(--pf-v5-c-form-control__select--PaddingRight);
+  --pf-v5-c-form-control--PaddingLeft: var(--pf-v5-c-form-control__select--PaddingLeft);
+}
+@-moz-document url-prefix() {
+  .pf-v5-c-form-control > select {
+    --pf-v5-c-form-control--PaddingRight: calc(var(--pf-v5-c-form-control__select--PaddingRight) - 1px);
+    --pf-v5-c-form-control--PaddingLeft: calc(var(--pf-v5-c-form-control__select--PaddingLeft) - 4px);
+  }
+}
+.pf-v5-c-form-control.pf-m-placeholder > select {
+  --pf-v5-c-form-control--Color: var(--pf-v5-c-form-control--m-placeholder--Color);
+}
+.pf-v5-c-form-control.pf-m-placeholder > select > * {
+  --pf-v5-c-form-control--Color: var(--pf-v5-c-form-control--m-placeholder--child--Color);
+}
+.pf-v5-c-form-control.pf-m-placeholder > select > *:disabled {
+  color: revert;
+}
+.pf-v5-c-form-control > textarea {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  resize: none;
+}
+.pf-v5-c-form-control.pf-m-resize-vertical {
+  --pf-v5-c-form-control--Resize: vertical;
+  overflow: auto;
+}
+.pf-v5-c-form-control.pf-m-resize-horizontal {
+  --pf-v5-c-form-control--Resize: horizontal;
+  overflow: auto;
+}
+.pf-v5-c-form-control.pf-m-resize-both {
+  --pf-v5-c-form-control--Resize: both;
+  overflow: auto;
+}
+
+.pf-v5-c-form-control__icon {
+  display: flex;
+  align-items: center;
+  height: var(--pf-v5-c-form-control__icon--Height);
+  color: var(--pf-v5-c-form-control__icon--Color);
+}
+.pf-v5-c-form-control__icon.pf-m-status {
+  --pf-v5-c-form-control__icon--Color: var(--pf-v5-c-form-control__icon--m-status--Color);
+}
+
+.pf-v5-c-form-control__toggle-icon {
+  display: flex;
+  grid-row: 1/2;
+  grid-column: 3;
+  align-items: center;
+  height: var(--pf-v5-c-form-control__toggle-icon--Height);
+  padding-right: var(--pf-v5-c-form-control__toggle-icon--PaddingRight);
+  padding-left: var(--pf-v5-c-form-control__toggle-icon--PaddingLeft);
+  color: var(--pf-v5-c-form-control__toggle-icon--Color);
+  pointer-events: none;
+}
+
+.pf-v5-c-form-control__utilities {
+  display: flex;
+  flex-wrap: nowrap;
+  grid-row: 1/2;
+  grid-column: 2;
+  gap: var(--pf-v5-c-form-control__utilities--Gap);
+  align-items: flex-start;
+  padding-right: var(--pf-v5-c-form-control__utilities--PaddingRight);
+  pointer-events: none;
+}
+
+:where(.pf-v5-theme-dark) .pf-v5-c-form-control {
+  --pf-v5-c-form-control--BorderTopColor: transparent;
+  --pf-v5-c-form-control--BorderRightColor: transparent;
+  --pf-v5-c-form-control--BorderBottomColor: var(--pf-v5-global--BorderColor--400);
+  --pf-v5-c-form-control--BorderLeftColor: transparent;
+  --pf-v5-c-form-control--BackgroundColor: var(--pf-v5-global--BackgroundColor--400);
+  --pf-v5-c-form-control--disabled--Color: var(--pf-v5-global--disabled-color--300);
+  --pf-v5-c-form-control--disabled--BackgroundColor: var(--pf-v5-global--disabled-color--200);
+  --pf-v5-c-form-control--readonly--BackgroundColor: var(--pf-v5-global--disabled-color--200);
+  color: var(--pf-v5-global--Color--100);
+}
+:where(.pf-v5-theme-dark) .pf-v5-c-form-control::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+:where(.pf-v5-theme-dark) .pf-v5-c-form-control.pf-m-readonly {
+  border-bottom-color: var(--pf-v5-global--palette--black-700);
+}
