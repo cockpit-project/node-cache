@@ -1,0 +1,8 @@
+"use strict";
+exports.__esModule = true;
+exports.global_FontFamily_redhatVF_heading_sans_serif = {
+  "name": "--pf-v5-global--FontFamily--redhatVF--heading--sans-serif",
+  "value": "\"RedHatDisplayVF\", \"RedHatDisplay\", helvetica, arial, sans-serif",
+  "var": "var(--pf-v5-global--FontFamily--redhatVF--heading--sans-serif)"
+};
+exports["default"] = exports.global_FontFamily_redhatVF_heading_sans_serif;
