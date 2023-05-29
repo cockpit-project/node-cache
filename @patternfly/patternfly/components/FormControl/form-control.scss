@@ -1,0 +1,357 @@
+.#{$form-control} {
+  // Component
+  --#{$form-control}--ColumnGap: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}--Color: var(--#{$pf-global}--Color--100);
+  --#{$form-control}--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$form-control}--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$form-control}--Resize: none;
+  --#{$form-control}--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$form-control}--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$form-control}--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$form-control}--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$form-control}--BorderRadius: 0;
+  --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$form-control}--Width: 100%;
+  --#{$form-control}--Height: calc(var(--#{$form-control}--FontSize) * var(--#{$form-control}--LineHeight) + var(--#{$form-control}--BorderWidth) * 2 + var(--#{$form-control}--PaddingTop) + var(--#{$form-control}--PaddingBottom)); // Needed for various browsers that compute height of form elements differently
+
+  // padding
+  // Note for top/bottom padding, subtracting the border height so the height of the input is consistent with buttons and dropdowns that use the same spacing but draw their borders with pseudo elements
+  --#{$form-control}--inset--base: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}--PaddingTop: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$pf-global}--BorderWidth--sm));
+  --#{$form-control}--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$pf-global}--BorderWidth--sm));
+  --#{$form-control}--PaddingRight: var(--#{$form-control}--inset--base);
+  --#{$form-control}--PaddingLeft: var(--#{$form-control}--inset--base);
+
+  // hover
+  --#{$form-control}--hover--BorderBottomColor: var(--#{$pf-global}--primary-color--100);
+
+  // focus
+  --#{$form-control}--focus--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$form-control}--focus--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--focus--BorderBottomWidth));
+  --#{$form-control}--focus--BorderBottomColor: var(--#{$pf-global}--primary-color--100);
+
+  // expanded
+  --#{$form-control}--m-expanded--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$form-control}--m-expanded--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--focus--BorderBottomWidth));
+  --#{$form-control}--m-expanded--BorderBottomColor: var(--#{$pf-global}--primary-color--100);
+
+  // input placeholder style
+  --#{$form-control}--m-placeholder--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$form-control}--m-placeholder--child--Color: var(--#{$pf-global}--Color--100);
+
+  // input disabled style
+  --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$form-control}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
+  --#{$form-control}--m-disabled--BorderColor: transparent;
+
+  // input readonly style
+  --#{$form-control}--m-readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
+  --#{$form-control}--m-readonly--hover--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$form-control}--m-readonly--focus--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$pf-global}--BorderWidth--sm));
+  --#{$form-control}--m-readonly--focus--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--m-readonly--focus--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
+
+  // input readonly plain style
+  --#{$form-control}--m-readonly--m-plain--BackgroundColor: transparent;
+  --#{$form-control}--m-readonly--m-plain--inset--base: 0;
+
+  // Input m-success -- rename vars to m-success in breaking change release
+  --#{$form-control}--m-success--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$form-control}--m-success--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--m-success--BorderBottomWidth));
+  --#{$form-control}--m-success--BorderBottomColor: var(--#{$pf-global}--success-color--100);
+  --#{$form-control}--m-success--PaddingRight: var(--#{$pf-global}--spacer--xl);
+
+  // Input m-warning
+  --#{$form-control}--m-warning--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$form-control}--m-warning--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--m-warning--BorderBottomWidth));
+  --#{$form-control}--m-warning--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
+  --#{$form-control}--m-warning--PaddingRight: var(--#{$pf-global}--spacer--xl);
+
+  // Input invalid
+  --#{$form-control}--m-error--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$form-control}--m-error--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--m-error--BorderBottomWidth));
+  --#{$form-control}--m-error--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
+  --#{$form-control}--m-error--PaddingRight: var(--#{$pf-global}--spacer--xl);
+  --#{$form-control}--m-error--IconWidth: var(--#{$form-control}--FontSize);
+
+
+  // Input m-icon
+  --#{$form-control}--m-icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
+  --#{$form-control}--m-icon--IconWidth: var(--#{$form-control}--FontSize);
+  --#{$form-control}--m-icon--icon--spacer: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}--m-icon--icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-error--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
+  --#{$form-control}__select--PaddingRight: calc(var(--#{$pf-global}--spacer--lg) + var(--#{$form-control}--BorderWidth) + var(--#{$form-control}--BorderWidth));
+  --#{$form-control}__select--PaddingLeft: calc(var(--#{$pf-global}--spacer--sm) - var(--#{$form-control}--BorderWidth));
+
+  // Select success
+  --#{$form-control}__select--m-success--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+
+  // Select warning
+  --#{$form-control}__select--m-warning--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+
+  // Select invalid
+  --#{$form-control}__select--m-error--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+
+  // Textarea
+  --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
+  --#{$form-control}--textarea--Height: auto;
+
+  // Form control icon 
+  --#{$form-control}__icon--Color: var(--#{$pf-global}--icon--Color--light);
+  --#{$form-control}__icon--m-status--Color: var(--#{$pf-global}--icon--Color--light);
+  --#{$form-control}--m-success__icon--m-status--Color: var(--#{$pf-global}--success-color--100);
+  --#{$form-control}--m-warning__icon--m-status--Color: var(--#{$pf-global}--warning-color--100);
+  --#{$form-control}--m-error__icon--m-status--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
+
+  // Form control utilities
+  --#{$form-control}__utilities--Gap: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}__utilities--PaddingTop: var(--#{$form-control}--inset--base);
+  --#{$form-control}__utilities--PaddingRight: var(--#{$form-control}--inset--base);
+
+  // Form control select toggle icon
+  --#{$form-control}__toggle-icon--PaddingRight: var(--#{$form-control}--inset--base);
+  --#{$form-control}__toggle-icon--PaddingLeft: var(--#{$form-control}--inset--base);
+  --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
+  --#{$form-control}__toggle-icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$form-control}--m-disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--100);
+
+  // This component always needs to be light
+  @include pf-v5-t-light("--#{$form-control}--Color");
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: var(--#{$form-control}--ColumnGap);
+  align-items: start;
+  width: var(--#{$form-control}--Width);
+  font-size: var(--#{$form-control}--FontSize);
+  line-height: var(--#{$form-control}--LineHeight);
+  resize: var(--#{$form-control}--Resize);
+  background-color: var(--#{$form-control}--BackgroundColor);
+  border: var(--#{$form-control}--BorderWidth) solid;
+  border-color: var(--#{$form-control}--BorderTopColor) var(--#{$form-control}--BorderRightColor) var(--#{$form-control}--BorderBottomColor) var(--#{$form-control}--BorderLeftColor);
+  border-radius: var(--#{$form-control}--BorderRadius);
+
+  > :is(input, select, textarea) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    padding: var(--#{$form-control}--PaddingTop) var(--#{$form-control}--PaddingRight) var(--#{$form-control}--PaddingBottom) var(--#{$form-control}--PaddingLeft);
+    color: var(--#{$form-control}--Color);
+    background-color: transparent;
+    border: none;
+    // stylelint-disable
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    // stylelint-enable
+  }
+
+  > ::placeholder {
+    color: var(--#{$form-control}--m-placeholder--Color); // TODO update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
+  }
+  
+  > :is(input, select) {
+    text-overflow: ellipsis;
+  }
+
+  &.pf-m-readonly {
+    --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-readonly--BackgroundColor);
+
+    // stylelint-disable selector-not-notation
+    &:not(.pf-m-success, .pf-m-warning, .pf-m-error) {
+      &:hover {
+        --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-readonly--hover--BorderBottomColor);
+      }
+
+      &:focus {
+        --#{$form-control}--focus--PaddingBottom: var(--#{$form-control}--m-readonly--focus--PaddingBottom);
+        --#{$form-control}--focus--BorderBottomWidth: var(--#{$form-control}--m-readonly--focus--BorderBottomWidth);
+        --#{$form-control}--focus--BorderBottomColor: var(--#{$form-control}--m-readonly--focus--BorderBottomColor);
+      }
+    }
+
+    &.pf-m-plain {
+      --#{$form-control}--m-readonly--BackgroundColor: var(--#{$form-control}--m-readonly--m-plain--BackgroundColor);
+      --#{$form-control}--inset--base: var(--#{$form-control}--m-readonly--m-plain--inset--base);
+
+      border-color: transparent;
+    }
+  }
+
+  &:hover {
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--hover--BorderBottomColor);
+  }
+
+  &:focus {
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--focus--BorderBottomColor);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--focus--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--focus--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--focus--PaddingBottom);
+
+    border-bottom-width: var(--#{$form-control}--focus--BorderBottomWidth);
+  }
+
+  &.pf-m-expanded {
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-expanded--BorderBottomColor);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-expanded--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-expanded--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-expanded--PaddingBottom);
+
+    border-bottom-width: var(--#{$form-control}--m-expanded--BorderBottomWidth);
+  }
+
+  &.pf-m-disabled {
+    --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-disabled--BackgroundColor);
+    --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
+    --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--m-disabled__toggle-icon--Color);
+
+    cursor: not-allowed;
+    border-color: var(--#{$form-control}--m-disabled--BorderColor);
+  }
+
+  &.pf-m-error {
+    --#{$form-control}--PaddingRight: var(--#{$form-control}--m-error--PaddingRight);
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-error--BorderBottomColor);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-error__icon--m-status--Color);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-error--PaddingBottom);
+    --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-error--m-status--PaddingRight);
+
+    border-bottom-width: var(--#{$form-control}--m-error--BorderBottomWidth);
+
+    &.pf-m-icon {
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
+    }
+  }
+
+  &.pf-m-success {
+    --#{$form-control}--PaddingRight: var(--#{$form-control}--m-success--PaddingRight);
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-success--PaddingBottom);
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-success--BorderBottomColor);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-success__icon--m-status--Color);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
+    --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-success--m-status--PaddingRight);
+
+    border-bottom-width: var(--#{$form-control}--m-success--BorderBottomWidth);
+
+    &.pf-m-icon {
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
+    }
+  }
+
+  &.pf-m-warning {
+    --#{$form-control}--PaddingRight: var(--#{$form-control}--m-warning--PaddingRight);
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-warning--PaddingBottom);
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-warning--BorderBottomColor);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-warning__icon--m-status--Color);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
+    --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-warning--m-status--PaddingRight);
+
+    border-bottom-width: var(--#{$form-control}--m-warning--BorderBottomWidth);
+
+    &.pf-m-icon {
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
+    }
+  }
+
+  &.pf-m-icon {
+    --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--PaddingRight);
+  }
+
+  > select {
+    --#{$form-control}--PaddingRight: var(--#{$form-control}__select--PaddingRight);
+    --#{$form-control}--PaddingLeft: var(--#{$form-control}__select--PaddingLeft);
+
+    // Firefox's select text has additional padding
+    // stylelint-disable-next-line
+    @-moz-document url-prefix() {
+      --#{$form-control}--PaddingRight: calc(var(--#{$form-control}__select--PaddingRight) - 1px);
+      --#{$form-control}--PaddingLeft: calc(var(--#{$form-control}__select--PaddingLeft) - 4px);
+    }
+  }
+
+  &.pf-m-placeholder > select {
+    --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--Color);
+
+    > * {
+      --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--child--Color);
+
+      // stylelint-disable max-nesting-depth
+      &:disabled {
+        color: revert;
+      }
+      // stylelint-enable
+    }
+  }
+  
+  > textarea {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+    resize: none;
+  }
+
+  &.pf-m-resize-vertical {
+    --#{$form-control}--Resize: vertical;
+
+    overflow: auto;
+  }
+
+  &.pf-m-resize-horizontal {
+    --#{$form-control}--Resize: horizontal;
+
+    overflow: auto;
+  }
+
+  &.pf-m-resize-both {
+    --#{$form-control}--Resize: both;
+
+    overflow: auto;
+  }
+
+}
+
+.#{$form-control}__icon {
+  display: flex;
+  align-items: center;
+  height: var(--#{$form-control}__icon--Height);
+  color: var(--#{$form-control}__icon--Color);
+
+  &.pf-m-status {
+    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--m-status--Color);
+  }
+}
+
+.#{$form-control}__toggle-icon {
+  display: flex;
+  grid-row: 1 / 2;
+  grid-column: 3;
+  align-items: center;
+  height: var(--#{$form-control}__toggle-icon--Height);
+  padding-right: var(--#{$form-control}__toggle-icon--PaddingRight);
+  padding-left: var(--#{$form-control}__toggle-icon--PaddingLeft);
+  color: var(--#{$form-control}__toggle-icon--Color);
+  pointer-events: none;
+}
+
+.#{$form-control}__utilities {
+  display: flex;
+  flex-wrap: nowrap;
+  grid-row: 1 / 2;
+  grid-column: 2;
+  gap: var(--#{$form-control}__utilities--Gap);
+  align-items: flex-start;
+  padding-right: var(--#{$form-control}__utilities--PaddingRight);
+  pointer-events: none;
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/form-control";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-form-control;
+}

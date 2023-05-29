@@ -1,0 +1,25 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-v5-theme-dark-form-control() {
+  .#{$form-control} {
+    --#{$form-control}--BorderTopColor: transparent;
+    --#{$form-control}--BorderRightColor: transparent;
+    --#{$form-control}--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+    --#{$form-control}--BorderLeftColor: transparent;
+    --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$form-control}--disabled--Color: var(--#{$pf-global}--disabled-color--300);
+    --#{$form-control}--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$form-control}--readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+
+    color: var(--#{$pf-global}--Color--100);
+
+    // chrome's calendar icon for type="date"
+    &::-webkit-calendar-picker-indicator {
+      filter: #{"invert(1)"};
+    }
+
+    &.pf-m-readonly {
+      border-bottom-color: var(--#{$pf-global}--palette--black-700); // should be a var?
+    }
+  }
+}
