@@ -1,0 +1,557 @@
+// stylelint-disable
+@mixin pf-mobile-layout {
+  .pf-m-grid.#{$table} {
+    @content;
+  }
+
+  .pf-m-grid-md.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--md) {
+      @content;
+    }
+  }
+
+  .pf-m-grid-lg.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--lg) {
+      @content;
+    }
+  }
+
+  .pf-m-grid-xl.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
+      @content;
+    }
+  }
+
+  .pf-m-grid-2xl.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--2xl) {
+      @content;
+    }
+  }
+}
+
+.#{$table}[class*="pf-m-grid"] {
+  // ============================================================ //
+  // Start non-conformant variables
+  //
+  // these variables do not conform to guidelines as styling targets individual elements
+  // this is purposeful and necessary to avoid adding selectors to each td/th
+  // ============================================================ //
+
+  // Table
+  --#{$table}--responsive--BorderColor: var(--#{$pf-global}--BorderColor--300);
+
+  // Body
+  --#{$table}--tbody--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--tbody--after--border-width--base: var(--#{$pf-global}--BorderWidth--lg);
+  --#{$table}--tbody--after--BorderLeftWidth: 0;
+  --#{$table}--tbody--after--BorderColor: var(--#{$pf-global}--active-color--100);
+
+  // Row
+  --#{$table}-tr--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
+  --#{$table}-tr--responsive--last-child--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$table}-tr--responsive--GridColumnGap: var(--#{$pf-global}--spacer--md);
+  --#{$table}-tr--responsive--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$table}-tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$table}-tr--responsive--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$table}-tr--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$table}-tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$table}-tr--responsive--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$table}-tr--responsive--xl--PaddingLeft: var(--#{$pf-global}--spacer--md);
+
+  @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
+    --#{$table}-tr--responsive--PaddingRight: var(--#{$table}-tr--responsive--xl--PaddingRight);
+    --#{$table}-tr--responsive--PaddingLeft: var(--#{$table}-tr--responsive--xl--PaddingLeft);
+  }
+
+  --#{$table}-tr--responsive--nested-table--PaddingTop: var(--#{$pf-global}--spacer--xl);
+  --#{$table}-tr--responsive--nested-table--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$table}-tr--responsive--nested-table--PaddingBottom: var(--#{$pf-global}--spacer--xl);
+  --#{$table}-tr--responsive--nested-table--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+
+  // expandable
+  --#{$table}--tbody--after--tr--BorderLeftWidth: 0;
+  --#{$table}--tbody--after--tr--BorderLeftColor: transparent;
+  --#{$table}--tbody--m-expanded--after--tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}--tbody--m-expanded--after--tr--BorderLeftColor: var(--#{$pf-global}--active-color--400);
+
+  // selected
+  --#{$table}--tbody--m-selected--after--tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}--tbody--m-selected--after--tr--BorderLeftColor: var(--#{$pf-global}--active-color--100);
+
+  // Cell display
+  --#{$table}--m-grid--cell--hidden-visible--Display: grid;
+
+  // Cell
+  --#{$table}--m-grid--cell--PaddingTop: 0;
+  --#{$table}--m-grid--cell--PaddingRight: 0;
+  --#{$table}--m-grid--cell--PaddingBottom: 0;
+  --#{$table}--m-grid--cell--PaddingLeft: 0;
+
+  // Td
+  --#{$table}-td--responsive--GridColumnGap: var(--#{$pf-global}--spacer--md);
+  --#{$table}--cell--responsive--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$table}--cell--responsive--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--cell--first-child--responsive--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--cell--responsive--PaddingRight: 0;
+  --#{$table}--cell--responsive--PaddingLeft: 0;
+
+  // Compact table
+  --#{$table}--m-compact-tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--m-compact-tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--m-compact-tr-td--responsive--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-compact-tr-td--responsive--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-compact__action--responsive--MarginTop: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$table}--m-compact__action--responsive--MarginBottom: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$table}--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+
+  // Expandable row content
+  --#{$table}__expandable-row-content--responsive--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__expandable-row-content--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$table}__expandable-row-content--responsive--xl--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$table}__expandable-row-content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+
+  @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
+    --#{$table}__expandable-row-content--responsive--PaddingRight: var(--#{$table}__expandable-row-content--responsive--xl--PaddingRight);
+    --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--#{$table}__expandable-row-content--responsive--xl--PaddingLeft);
+  }
+
+  // Check
+  --#{$table}__check--responsive--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$table}__check--responsive--MarginTop: #{pf-size-prem(14px)};
+
+  // Favorite
+  --#{$table}--m-grid__favorite--MarginTop: #{pf-size-prem(8px)};
+  --#{$table}--m-grid__check--favorite--MarginLeft: var(--#{$pf-global}--spacer--xl);
+
+  // Action
+  --#{$table}--m-grid__action--MarginTop: #{pf-size-prem(6px)};
+  --#{$table}__action--responsive--MarginLeft: var(--#{$pf-global}--spacer--xl);
+  --#{$table}--m-grid__favorite--action--MarginLeft: var(--#{$pf-global}--spacer--2xl);
+  --#{$table}--m-grid__check--favorite--action--MarginLeft: calc(var(--#{$table}--m-grid__check--favorite--MarginLeft) + var(--#{$table}--m-grid__favorite--action--MarginLeft));
+
+  // Toggle icons
+  --#{$table}__toggle__icon--Transition: .2s ease-in 0s;
+  --#{$table}__toggle--m-expanded__icon--Rotate: 180deg;
+}
+
+@include pf-mobile-layout {
+  --#{$table}--cell--PaddingTop: var(--#{$table}--m-grid--cell--PaddingTop);
+  --#{$table}--cell--PaddingRight: var(--#{$table}--m-grid--cell--PaddingRight);
+  --#{$table}--cell--PaddingBottom: var(--#{$table}--m-grid--cell--PaddingBottom);
+  --#{$table}--cell--PaddingLeft: var(--#{$table}--m-grid--cell--PaddingLeft);
+
+  // Favorite
+  --#{$table}__favorite--c-button--MarginTop: auto;
+  --#{$table}__favorite--c-button--MarginRight: auto;
+  --#{$table}__favorite--c-button--MarginBottom: auto;
+  --#{$table}__favorite--c-button--MarginLeft: auto;
+
+  display: grid;
+  border: none;
+
+  // reset cell modifications
+  tr > * {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  // apply modifications to text
+  .#{$table}__text {
+    position: relative;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    overflow: var(--#{$table}--cell--Overflow);
+    text-overflow: var(--#{$table}--cell--TextOverflow);
+    white-space: var(--#{$table}--cell--WhiteSpace);
+  }
+
+  // Thead
+  thead {
+    display: none;
+  }
+
+  // Tbody
+  tbody {
+    display: block;
+
+    &:first-of-type {
+      border-top: var(--#{$table}--tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+    }
+  }
+
+  // Remove the border from the body inside of the nested table
+  table.pf-m-compact > tbody {
+    border-top: 0;
+  }
+
+  // Table row
+  tr:not(.#{$table}__expandable-row) {
+    border-bottom: var(--#{$table}-tr--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+  }
+
+  // The last tr should always have a border width of 1px
+  tr:last-child,
+  tbody:last-of-type:not(:only-of-type) > tr {
+    border-bottom-width: var(--#{$table}-tr--responsive--last-child--BorderBottomWidth);
+  }
+
+  tbody.pf-m-expanded {
+    border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+
+    tr:not(.#{$table}__expandable-row) {
+      border-bottom: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: var(--#{$table}--tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+    }
+  }
+
+  tr.pf-m-selected {
+    --#{$table}__expandable-row--after--BorderLeftWidth: 0;
+    --#{$table}__expandable-row--after--BorderColor: transparent;
+  }
+
+  // Standard table row (non-expandable)
+  // exclude expandable rows
+  tr:not(.#{$table}__expandable-row) {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+
+    // set subsequent auto column width to max-content
+    grid-auto-columns: max-content;
+    grid-column-gap: var(--#{$table}-tr--responsive--GridColumnGap);
+
+    // set base variables to reset later
+    padding: var(--#{$table}-tr--responsive--PaddingTop) var(--#{$table}-tr--responsive--PaddingRight) var(--#{$table}-tr--responsive--PaddingBottom) var(--#{$table}-tr--responsive--PaddingLeft);
+
+    // Reset td padding
+    & > * {
+      padding: var(--#{$table}--cell--responsive--PaddingTop) var(--#{$table}--cell--responsive--PaddingRight) var(--#{$table}--cell--responsive--PaddingBottom) var(--#{$table}--cell--responsive--PaddingLeft);
+
+      // remove padding from first child to align with kebab
+      &:first-child {
+        --#{$table}--cell--responsive--PaddingTop: var(--#{$table}--cell--first-child--responsive--PaddingTop);
+      }
+    }
+  }
+
+  &.pf-m-compact {
+    --#{$table}-tr--responsive--PaddingTop: var(--#{$table}--m-compact-tr--responsive--PaddingTop);
+    --#{$table}-tr--responsive--PaddingBottom: var(--#{$table}--m-compact-tr--responsive--PaddingBottom);
+    --#{$table}--cell--responsive--PaddingTop: var(--#{$table}--m-compact-tr-td--responsive--PaddingTop);
+    --#{$table}--cell--responsive--PaddingBottom: var(--#{$table}--m-compact-tr-td--responsive--PaddingBottom);
+    --#{$table}__check--input--MarginTop: 0;
+
+    .#{$table}__action {
+      margin-top: var(--#{$table}--m-compact__action--responsive--MarginTop);
+      margin-bottom: var(--#{$table}--m-compact__action--responsive--MarginTop);
+    }
+
+    .#{$table}__toggle .#{$button} {
+      margin-bottom: var(--#{$table}--m-compact__toggle--c-button--responsive--MarginBottom);
+    }
+  }
+
+  .#{$table}__icon > * {
+    text-align: left;
+  }
+
+  // Standard td, in standard row (non-expandable)
+  [data-label] {
+    // default pf-v5-hidden-visible() mixin is called in table.scss. redefining variable here
+    --#{$table}--cell--hidden-visible--Display: var(--#{$table}--m-grid--cell--hidden-visible--Display);
+
+    grid-column: 1;
+    grid-column-gap: var(--#{$table}-td--responsive--GridColumnGap);
+
+    // use minmax func to contain possible text modifier width
+    grid-template-columns: 1fr minmax(0, 1.5fr);
+    align-items: start;
+
+    // set contents of td to start at column two of td grid
+    > * {
+      grid-column: 2;
+    }
+
+    &::before {
+      font-weight: bold;
+      text-align: left;
+      content: attr(data-label);
+    }
+  }
+
+  tr > * {
+    // Remove first child padding left
+    &:first-child {
+      --#{$table}--cell--PaddingLeft: 0;
+    }
+
+    // Remove last child padding right
+    &:last-child {
+      --#{$table}--cell--PaddingRight: 0;
+    }
+  }
+
+  // nested tables
+  .#{$table} {
+    --#{$table}-tr--responsive--PaddingTop: var(--#{$table}-tr--responsive--nested-table--PaddingTop);
+    --#{$table}-tr--responsive--PaddingRight: var(--#{$table}-tr--responsive--nested-table--PaddingRight);
+    --#{$table}-tr--responsive--PaddingBottom: var(--#{$table}-tr--responsive--nested-table--PaddingBottom);
+    --#{$table}-tr--responsive--PaddingLeft: var(--#{$table}-tr--responsive--nested-table--PaddingLeft);
+
+    border: 0;
+
+    tr:not(.#{$table}__expandable-row) + tr:not(.#{$table}__expandable-row) {
+      --#{$table}-tr--responsive--PaddingTop: 0;
+    }
+  }
+
+  .#{$table}__compound-expansion-toggle {
+    --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: 0;
+    --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
+    --#{$table}__compound-expansion-toggle__button--after--Top: 100%;
+  }
+
+  // Compound expansion responsive
+  // Tbody
+  tbody {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      border: 0;
+      border-left: var(--#{$table}--tbody--after--BorderLeftWidth) solid var(--#{$table}--tbody--after--BorderColor);
+    }
+
+    &.pf-m-expanded {
+      --#{$table}--tbody--after--BorderLeftWidth: var(--#{$table}--tbody--after--border-width--base);
+
+      & tbody {
+        --#{$table}--tbody--after--BorderLeftWidth: 0;
+      }
+    }
+
+    > tr > :first-child:not(.#{$table}__check)::after {
+      --#{$table}__expandable-row--after--BorderLeftWidth: 0;
+
+      position: static;
+      width: auto;
+      background-color: transparent;
+    }
+  }
+
+  // Expandable row
+  .#{$table}__expandable-row {
+    --#{$table}--cell--responsive--PaddingTop: 0;
+    --#{$table}--cell--responsive--PaddingRight: 0;
+    --#{$table}--cell--responsive--PaddingBottom: 0;
+    --#{$table}--cell--responsive--PaddingLeft: 0;
+    --#{$table}--cell--PaddingRight: 0;
+    --#{$table}--cell--PaddingLeft: 0;
+
+    display: block;
+    max-height: var(--#{$table}__expandable-row--MaxHeight);  // Overflow scroll should only happen on responsive
+    overflow-y: auto;
+    border-bottom: none;
+    box-shadow: none;
+
+    // cells
+    > * {
+      position: static;
+      display: block;
+    }
+
+    // Modifier - expanded tr
+    &.pf-m-expanded {
+      border-top-color: var(--#{$table}--BorderColor);
+    }
+
+    > :first-child:not(.#{$table}__check)::after {
+      // Border treatment
+      content: none;
+    }
+
+    td, th {
+      &.pf-m-no-padding {
+        .#{$table}__expandable-row-content {
+          padding: 0;
+        }
+      }
+    }
+
+    &:not(.pf-m-expanded) {
+      display: none;
+    }
+
+    .#{$table}__expandable-row-content {
+      padding-right: var(--#{$table}__expandable-row-content--responsive--PaddingRight);
+      padding-left: var(--#{$table}__expandable-row-content--responsive--PaddingLeft);
+    }
+  }
+
+  // tr selected
+  tbody.pf-m-hoverable {
+    --#{$table}--tbody--after--BorderLeftWidth: 0;
+    --#{$table}--tbody--after--BorderLeftColor: transparent;
+
+    &,
+    > tr {
+      position: relative;
+    }
+
+    > tr::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: var(--#{$table}--tbody--after--tr--BorderLeftWidth);
+      background-color: var(--#{$table}--tbody--after--tr--BorderLeftColor);
+    }
+
+    &.pf-m-expanded {
+      --#{$table}--tbody--after--tr--BorderLeftWidth: var(--#{$table}--tbody--m-expanded--after--tr--BorderLeftWidth);
+      --#{$table}--tbody--after--tr--BorderLeftColor: var(--#{$table}--tbody--m-expanded--after--tr--BorderLeftColor);
+    }
+
+    &.pf-m-selected {
+      --#{$table}--tbody--after--tr--BorderLeftWidth: var(--#{$table}--tbody--m-selected--after--tr--BorderLeftWidth);
+      --#{$table}--tbody--after--tr--BorderLeftColor: var(--#{$table}--tbody--m-selected--after--tr--BorderLeftColor);
+    }
+  }
+
+
+  // tr selected
+  tr.pf-m-selected {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: var(--#{$table}--tr--m-selected--after--BorderLeftWidth);
+      background-color: var(--#{$table}--tr--m-selected--after--BorderLeftColor);
+    }
+  }
+
+  // Set defaults
+  tr:not(.#{$table}__expandable-row) {
+    .#{$table}__toggle,
+    .#{$table}__check,
+    .#{$table}__favorite,
+    .#{$table}__action {
+      width: auto;
+      padding: 0;
+    }
+  }
+
+  .#{$table}__toggle {
+    grid-row-start: 20;
+    grid-column: -1;
+    justify-self: end;
+    padding-right: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .#{$table}__button {
+    --#{$table}--cell--PaddingTop: var(--#{$table}--m-grid--cell--PaddingTop);
+    --#{$table}--cell--PaddingRight: var(--#{$table}--m-grid--cell--PaddingRight);
+    --#{$table}--cell--PaddingBottom: var(--#{$table}--m-grid--cell--PaddingBottom);
+    --#{$table}--cell--PaddingLeft: var(--#{$table}--m-grid--cell--PaddingLeft);
+  }
+
+  .#{$table}__check,
+  .#{$table}__favorite,
+  .#{$table}__action {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  // Check table cell
+  .#{$table}__check {
+    margin-top: var(--#{$table}__check--responsive--MarginTop);
+    margin-left: var(--#{$table}__check--responsive--MarginLeft);
+
+    ~ .#{$table}__favorite {
+      margin-left: var(--#{$table}--m-grid__check--favorite--MarginLeft);
+
+      ~ .#{$table}__action {
+        margin-left: var(--#{$table}--m-grid__check--favorite--action--MarginLeft);
+      }
+    }
+
+    ~ .#{$table}__action {
+      margin-left: var(--#{$table}__action--responsive--MarginLeft);
+    }
+  }
+
+  .#{$table}__favorite {
+    margin-top: var(--#{$table}--m-grid__favorite--MarginTop);
+
+    ~ .#{$table}__action {
+      margin-left: var(--#{$table}--m-grid__favorite--action--MarginLeft);
+    }
+  }
+
+  // Action cell
+  .#{$table}__action {
+    margin-top: var(--#{$table}--m-grid__action--MarginTop);
+    text-align: right;
+
+    // @smallest breakpoint
+    @media screen and (max-width: $pf-v5-global--breakpoint--sm) {
+      grid-row-start: 1;
+      grid-column-start: 2;
+      margin-left: 0;
+    }
+  }
+
+  .#{$table}__inline-edit-action {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .#{$table}__toggle-icon {
+    transition: var(--#{$table}__toggle__icon--Transition);
+
+    .#{$button}.pf-m-expanded > & {
+      transform: rotate(var(--#{$table}__toggle--m-expanded__icon--Rotate));
+    }
+  }
+
+  // No wrap
+  .pf-m-nowrap {
+    --#{$table}--cell--Overflow: auto;
+  }
+
+  // Fit content
+  .pf-m-fit-content {
+    width: auto;
+    white-space: normal;
+  }
+
+  .pf-m-truncate {
+    --#{$table}--cell--MaxWidth: 100%;
+  }
+
+  [class*="pf-m-width"] {
+    --#{$table}--cell--Width: auto;
+  }
+}
+
+// stylelint-enable
