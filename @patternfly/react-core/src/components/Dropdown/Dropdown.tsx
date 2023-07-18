@@ -1,0 +1,153 @@
+import React from 'react';
+import { css } from '@patternfly/react-styles';
+import { Menu, MenuContent, MenuProps } from '../Menu';
+import { Popper } from '../../helpers/Popper/Popper';
+import { useOUIAProps, OUIAProps } from '../../helpers';
+
+export interface DropdownPopperProps {
+  /** Vertical direction of the popper. If enableFlip is set to true, this will set the initial direction before the popper flips. */
+  direction?: 'up' | 'down';
+  /** Horizontal position of the popper */
+  position?: 'right' | 'left' | 'center';
+  /** Custom width of the popper. If the value is "trigger", it will set the width to the dropdown toggle's width */
+  width?: string | 'trigger';
+  /** Minimum width of the popper. If the value is "trigger", it will set the min width to the dropdown toggle's width */
+  minWidth?: string | 'trigger';
+  /** Maximum width of the popper. If the value is "trigger", it will set the max width to the dropdown toggle's width */
+  maxWidth?: string | 'trigger';
+  /** Enable to flip the popper when it reaches the boundary */
+  enableFlip?: boolean;
+}
+
+/**
+ * See the Menu documentation for additional props that may be passed.
+ */
+export interface DropdownProps extends MenuProps, OUIAProps {
+  /** Anything which can be rendered in a dropdown. */
+  children?: React.ReactNode;
+  /** Classes applied to root element of dropdown. */
+  className?: string;
+  /** Renderer for a custom dropdown toggle. Forwards a ref to the toggle. */
+  toggle: (toggleRef: React.RefObject<any>) => React.ReactNode;
+  /** Flag to indicate if menu is opened.*/
+  isOpen?: boolean;
+  /** Function callback called when user selects item. */
+  onSelect?: (
+    event?: React.MouseEvent<Element, MouseEvent>,
+    itemId?: string | number,
+    toggleRef?: React.RefObject<any>
+  ) => void;
+  /** Callback to allow the dropdown component to change the open state of the menu.
+   * Triggered by clicking outside of the menu, or by pressing either tab or escape. */
+  onOpenChange?: (isOpen: boolean) => void;
+  /** Indicates if the menu should be without the outer box-shadow. */
+  isPlain?: boolean;
+  /** Indicates if the menu should be scrollable. */
+  isScrollable?: boolean;
+  /** @hide Forwarded ref */
+  innerRef?: React.Ref<any>;
+  /** Value to overwrite the randomly generated data-ouia-component-id.*/
+  ouiaId?: number | string;
+  /** Set the value of data-ouia-safe. Only set to true when the component is in a static state, i.e. no animations are occurring. At all other times, this value must be false. */
+  ouiaSafe?: boolean;
+  /** z-index of the dropdown menu */
+  zIndex?: number;
+  /** Additional properties to pass to the Popper */
+  popperProps?: DropdownPopperProps;
+}
+
+const DropdownBase: React.FunctionComponent<DropdownProps> = ({
+  children,
+  className,
+  onSelect,
+  isOpen,
+  toggle,
+  onOpenChange,
+  isPlain,
+  isScrollable,
+  innerRef,
+  ouiaId,
+  ouiaSafe = true,
+  zIndex = 9999,
+  popperProps,
+  ...props
+}: DropdownProps) => {
+  const localMenuRef = React.useRef<HTMLDivElement>();
+  const toggleRef = React.useRef<HTMLButtonElement>();
+  const ouiaProps = useOUIAProps(Dropdown.displayName, ouiaId, ouiaSafe);
+
+  const menuRef = (innerRef as React.RefObject<HTMLDivElement>) || localMenuRef;
+  React.useEffect(() => {
+    const handleMenuKeys = (event: KeyboardEvent) => {
+      // Close the menu on tab or escape if onOpenChange is provided
+      if (
+        isOpen &&
+        onOpenChange &&
+        (menuRef.current?.contains(event.target as Node) || toggleRef.current?.contains(event.target as Node))
+      ) {
+        if (event.key === 'Escape' || event.key === 'Tab') {
+          event.preventDefault();
+          onOpenChange(false);
+          toggleRef.current?.focus();
+        }
+      }
+    };
+
+    const handleClick = (event: MouseEvent) => {
+      // toggle was clicked open via keyboard, focus on first menu item
+      if (isOpen && toggleRef.current?.contains(event.target as Node) && event.detail === 0) {
+        setTimeout(() => {
+          const firstElement = menuRef?.current?.querySelector(
+            'li button:not(:disabled),li input:not(:disabled),li a:not([aria-disabled="true"])'
+          );
+          firstElement && (firstElement as HTMLElement).focus();
+        }, 0);
+      }
+
+      // If the event is not on the toggle and onOpenChange callback is provided, close the menu
+      if (isOpen && onOpenChange && !toggleRef?.current?.contains(event.target as Node)) {
+        if (isOpen && !menuRef.current?.contains(event.target as Node)) {
+          onOpenChange(false);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleMenuKeys);
+    window.addEventListener('click', handleClick);
+
+    return () => {
+      window.removeEventListener('keydown', handleMenuKeys);
+      window.removeEventListener('click', handleClick);
+    };
+  }, [isOpen, menuRef, onOpenChange]);
+
+  const menu = (
+    <Menu
+      className={css(className)}
+      ref={menuRef}
+      onSelect={(event, itemId) => onSelect && onSelect(event, itemId, toggleRef)}
+      isPlain={isPlain}
+      isScrollable={isScrollable}
+      {...props}
+      {...ouiaProps}
+    >
+      <MenuContent>{children}</MenuContent>
+    </Menu>
+  );
+  return (
+    <Popper
+      trigger={toggle(toggleRef)}
+      triggerRef={toggleRef}
+      popper={menu}
+      popperRef={menuRef}
+      isVisible={isOpen}
+      zIndex={zIndex}
+      {...popperProps}
+    />
+  );
+};
+
+export const Dropdown = React.forwardRef((props: DropdownProps, ref: React.Ref<any>) => (
+  <DropdownBase innerRef={ref} {...props} />
+));
+Dropdown.displayName = 'Dropdown';
