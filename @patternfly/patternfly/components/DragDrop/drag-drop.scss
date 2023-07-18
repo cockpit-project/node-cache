@@ -1,0 +1,69 @@
+// @debug $draggable; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$draggable} {
+  --#{$draggable}--Cursor: auto;
+  --#{$draggable}--m-dragging--Cursor: grabbing;
+  --#{$draggable}--m-dragging--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+  --#{$draggable}--m-dragging--after--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$draggable}--m-dragging--after--BorderColor: var(--#{$pf-global}--active-color--100);
+  --#{$draggable}--m-drag-outside--Cursor: not-allowed;
+  --#{$draggable}--m-drag-outside--after--BorderColor: var(--#{$pf-global}--danger-color--100);
+
+  cursor: var(--#{$draggable}--Cursor);
+
+  &.pf-m-dragging {
+    --#{$draggable}--Cursor: var(--#{$draggable}--m-dragging--Cursor);
+
+    position: relative;
+    background-color: var(--#{$draggable}--m-dragging--BackgroundColor); // intentionally empty to be set if doesn't exist
+    box-shadow: var(--#{$draggable}--m-dragging--BoxShadow);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      border: var(--#{$draggable}--m-dragging--after--BorderWidth) solid var(--#{$draggable}--m-dragging--after--BorderColor);
+    }
+  }
+
+  &.pf-m-drag-outside {
+    --#{$draggable}--m-dragging--Cursor: var(--#{$draggable}--m-drag-outside--Cursor);
+    --#{$draggable}--m-dragging--after--BorderColor: var(--#{$draggable}--m-drag-outside--after--BorderColor);
+  }
+}
+
+.#{$droppable} {
+  $pf-v5-global--BackgroundColor--100: #fff;
+  $pf-v5-c-droppable--m-dragging--after--BackgroundColor: rgba($pf-v5-global--BackgroundColor--100, .6);
+
+  --#{$droppable}--m-dragging--after--BackgroundColor: #{$pf-v5-c-droppable--m-dragging--after--BackgroundColor}; // allows for rbga() so we can combine background and border in single element
+  --#{$droppable}--m-dragging--after--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$droppable}--m-dragging--after--BorderColor: var(--#{$pf-global}--active-color--100);
+  --#{$droppable}--m-drag-outside--after--BorderColor: var(--#{$pf-global}--danger-color--100);
+
+  &.pf-m-dragging {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      content: "";
+    }
+  }
+
+  &::after {
+    background-color: var(--#{$droppable}--m-dragging--after--BackgroundColor);
+    border: var(--#{$droppable}--m-dragging--after--BorderWidth) solid var(--#{$droppable}--m-dragging--after--BorderColor);
+  }
+
+  &.pf-m-drag-outside {
+    --#{$droppable}--m-dragging--after--BorderColor: var(--#{$droppable}--m-drag-outside--after--BorderColor);
+  }
+}
