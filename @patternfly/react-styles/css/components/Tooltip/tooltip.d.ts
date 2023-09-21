@@ -1,0 +1,41 @@
+import './tooltip.css';
+declare const _default: {
+  "dirRtl": "pf-v5-m-dir-rtl",
+  "modifiers": {
+    "top": "pf-m-top",
+    "topLeft": "pf-m-top-left",
+    "topRight": "pf-m-top-right",
+    "blockStart": "pf-m-block-start",
+    "blockStartInlineStart": "pf-m-block-start-inline-start",
+    "blockStartInlineEnd": "pf-m-block-start-inline-end",
+    "bottom": "pf-m-bottom",
+    "bottomLeft": "pf-m-bottom-left",
+    "bottomRight": "pf-m-bottom-right",
+    "blockEnd": "pf-m-block-end",
+    "blockEndInlineStart": "pf-m-block-end-inline-start",
+    "blockEndInlineEnd": "pf-m-block-end-inline-end",
+    "left": "pf-m-left",
+    "leftTop": "pf-m-left-top",
+    "leftBottom": "pf-m-left-bottom",
+    "inlineStart": "pf-m-inline-start",
+    "inlineStartBlockStart": "pf-m-inline-start-block-start",
+    "inlineStartBlockEnd": "pf-m-inline-start-block-end",
+    "right": "pf-m-right",
+    "rightTop": "pf-m-right-top",
+    "rightBottom": "pf-m-right-bottom",
+    "inlineEnd": "pf-m-inline-end",
+    "inlineEndBlockStart": "pf-m-inline-end-block-start",
+    "inlineEndBlockEnd": "pf-m-inline-end-block-end",
+    "blockStartBlockStart": "pf-m-block-start-block-start",
+    "blockEndBlockStart": "pf-m-block-end-block-start",
+    "blockStartBlockEnd": "pf-m-block-start-block-end",
+    "blockEndBlockEnd": "pf-m-block-end-block-end",
+    "textAlignLeft": "pf-m-text-align-left",
+    "textAlignStart": "pf-m-text-align-start"
+  },
+  "themeDark": "pf-v5-theme-dark",
+  "tooltip": "pf-v5-c-tooltip",
+  "tooltipArrow": "pf-v5-c-tooltip__arrow",
+  "tooltipContent": "pf-v5-c-tooltip__content"
+};
+export default _default;

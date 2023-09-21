@@ -1,0 +1,197 @@
+// @debug $tooltip; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$tooltip} {
+  // Component variables
+  --#{$tooltip}--MaxWidth: #{pf-size-prem(300px)};
+  --#{$tooltip}--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+
+  // Content variables
+  --#{$tooltip}__content--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$tooltip}__content--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$tooltip}__content--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$tooltip}__content--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$tooltip}__content--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$tooltip}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
+  --#{$tooltip}__content--FontSize: var(--#{$pf-global}--FontSize--sm);
+
+  // Arrow variables
+  --#{$tooltip}__arrow--Width: #{pf-size-prem(15px)};
+  --#{$tooltip}__arrow--Height: #{pf-size-prem(15px)};
+  --#{$tooltip}__arrow--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
+  --#{$tooltip}__arrow--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+  --#{$tooltip}__arrow--m-top--TranslateX: -50%;
+  --#{$tooltip}__arrow--m-top--TranslateY: 50%;
+  --#{$tooltip}__arrow--m-top--Rotate: 45deg;
+  --#{$tooltip}__arrow--m-right--TranslateX: -50%;
+  --#{$tooltip}__arrow--m-right--TranslateY: -50%;
+  --#{$tooltip}__arrow--m-right--Rotate: 45deg;
+  --#{$tooltip}__arrow--m-bottom--TranslateX: -50%;
+  --#{$tooltip}__arrow--m-bottom--TranslateY: -50%;
+  --#{$tooltip}__arrow--m-bottom--Rotate: 45deg;
+  --#{$tooltip}__arrow--m-left--TranslateX: 50%;
+  --#{$tooltip}__arrow--m-left--TranslateY: -50%;
+  --#{$tooltip}__arrow--m-left--Rotate: 45deg;
+
+  position: relative;
+  max-width: var(--#{$tooltip}--MaxWidth);
+  box-shadow: var(--#{$tooltip}--BoxShadow);
+
+  &:is(
+    .pf-m-top,
+    .pf-m-top-left,
+    .pf-m-top-right,
+    .pf-m-block-start,
+    .pf-m-block-start-inline-start,
+    .pf-m-block-start-inline-end
+  ) {
+    .#{$tooltip}__arrow {
+      inset-block-end: 0;
+      inset-inline-start: 50%;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$tooltip}__arrow--m-top--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-top--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-top--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$tooltip}__arrow--m-top--TranslateX))}) translateY(var(--#{$tooltip}__arrow--m-top--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-top--Rotate))
+      );
+    }
+  }
+
+  &:is(
+    .pf-m-bottom,
+    .pf-m-bottom-left,
+    .pf-m-bottom-right,
+    .pf-m-block-end,
+    .pf-m-block-end-inline-start,
+    .pf-m-block-end-inline-end
+  ) {
+    .#{$tooltip}__arrow {
+      inset-block-start: 0;
+      inset-inline-start: 50%;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$tooltip}__arrow--m-bottom--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-bottom--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-bottom--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$tooltip}__arrow--m-bottom--TranslateX))}) translateY(var(--#{$tooltip}__arrow--m-bottom--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-bottom--Rotate))
+      );
+    }
+  }
+
+  &:is(
+    .pf-m-left,
+    .pf-m-left-top,
+    .pf-m-left-bottom,
+    .pf-m-inline-start,
+    .pf-m-inline-start-block-start,
+    .pf-m-inline-start-block-end
+  ) {
+    .#{$tooltip}__arrow {
+      inset-block-start: 50%;
+      inset-inline-end: 0;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$tooltip}__arrow--m-left--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-left--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-left--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$tooltip}__arrow--m-left--TranslateX))}) translateY(var(--#{$tooltip}__arrow--m-left--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-left--Rotate))
+      );
+    }
+  }
+
+  &:is(
+    .pf-m-right,
+    .pf-m-right-top,
+    .pf-m-right-bottom,
+    .pf-m-inline-end,
+    .pf-m-inline-end-block-start,
+    .pf-m-inline-end-block-end
+  ) {
+    .#{$tooltip}__arrow {
+      inset-block-start: 50%;
+      inset-inline-start: 0;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$tooltip}__arrow--m-right--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-right--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-right--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$tooltip}__arrow--m-right--TranslateX))}) translateY(var(--#{$tooltip}__arrow--m-right--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-right--Rotate))
+      );
+    }
+  }
+
+  &:is(
+    .pf-m-left-top,
+    .pf-m-right-top,
+    .pf-m-inline-start-block-start,
+    .pf-m-inline-end-block-start
+  ) {
+    .#{$tooltip}__arrow {
+      inset-block-start: var(--#{$tooltip}__arrow--Height);
+    }
+  }
+
+  &:is(
+    .pf-m-left-bottom,
+    .pf-m-right-bottom,
+    .pf-m-inline-start-block-end,
+    .pf-m-inline-end-block-end
+  ) {
+    .#{$tooltip}__arrow {
+      inset-block-start: auto;
+      inset-block-end: 0;
+    }
+  }
+
+  &:is(
+    .pf-m-top-left,
+    .pf-m-bottom-left,
+    .pf-m-block-start-block-start,
+    .pf-m-block-end-block-start
+  ) {
+    .#{$tooltip}__arrow {
+      inset-inline-start: var(--#{$tooltip}__arrow--Width);
+    }
+  }
+
+  &:is(
+    .pf-m-top-right,
+    .pf-m-bottom-right,
+    .pf-m-block-start-block-end,
+    .pf-m-block-end-block-end
+  ) {
+    .#{$tooltip}__arrow {
+      inset-inline-start: auto;
+      inset-inline-end: 0;
+    }
+  }
+}
+
+.#{$tooltip}__content {
+  position: relative;
+  padding-block-start: var(--#{$tooltip}__content--PaddingTop);
+  padding-block-end: var(--#{$tooltip}__content--PaddingBottom);
+  padding-inline-start: var(--#{$tooltip}__content--PaddingLeft);
+  padding-inline-end: var(--#{$tooltip}__content--PaddingRight);
+  font-size: var(--#{$tooltip}__content--FontSize);
+  color: var(--#{$tooltip}__content--Color);
+  text-align: center;
+  word-break: break-word;
+  background-color: var(--#{$tooltip}__content--BackgroundColor);
+
+  &:is(.pf-m-text-align-left, .pf-m-text-align-start) {
+    text-align: start;
+  }
+}
+
+.#{$tooltip}__arrow {
+  position: absolute;
+  width: var(--#{$tooltip}__arrow--Width);
+  height: var(--#{$tooltip}__arrow--Height);
+  pointer-events: none;
+  background-color: var(--#{$tooltip}__arrow--BackgroundColor);
+  box-shadow: var(--#{$tooltip}__arrow--BoxShadow);
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/tooltip";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-tooltip;
+}
