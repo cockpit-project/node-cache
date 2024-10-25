@@ -1,0 +1,19 @@
+{
+  "CheckboxSelect": "dist/dynamic/components/Select",
+  "CheckboxSelectOption": "dist/dynamic/components/Select",
+  "CheckboxSelectProps": "dist/dynamic/components/Select",
+  "MultiTypeaheadSelect": "dist/dynamic/components/Select",
+  "MultiTypeaheadSelectBase": "dist/dynamic/components/Select",
+  "MultiTypeaheadSelectOption": "dist/dynamic/components/Select",
+  "MultiTypeaheadSelectProps": "dist/dynamic/components/Select",
+  "SimpleDropdown": "dist/dynamic/components/Dropdown",
+  "SimpleDropdownItem": "dist/dynamic/components/Dropdown",
+  "SimpleDropdownProps": "dist/dynamic/components/Dropdown",
+  "SimpleSelect": "dist/dynamic/components/Select",
+  "SimpleSelectOption": "dist/dynamic/components/Select",
+  "SimpleSelectProps": "dist/dynamic/components/Select",
+  "TypeaheadSelect": "dist/dynamic/components/Select",
+  "TypeaheadSelectBase": "dist/dynamic/components/Select",
+  "TypeaheadSelectOption": "dist/dynamic/components/Select",
+  "TypeaheadSelectProps": "dist/dynamic/components/Select"
+}
