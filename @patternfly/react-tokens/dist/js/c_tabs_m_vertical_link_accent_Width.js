@@ -1,0 +1,8 @@
+"use strict";
+exports.__esModule = true;
+exports.c_tabs_m_vertical_link_accent_Width = {
+  "name": "--pf-v6-c-tabs--m-vertical--link-accent--Width",
+  "value": "0",
+  "var": "var(--pf-v6-c-tabs--m-vertical--link-accent--Width)"
+};
+exports["default"] = exports.c_tabs_m_vertical_link_accent_Width;
