@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render SerialConsoleActions 1`] = `
+<DocumentFragment>
+  <div
+    class="consoleActionsSerial-0-2-1"
+  >
+    <button
+      aria-disabled="false"
+      class="pf-v6-c-button pf-m-secondary"
+      data-ouia-component-id="OUIA-Generated-Button-secondary-1"
+      data-ouia-component-type="PF6/Button"
+      data-ouia-safe="true"
+      type="button"
+    >
+      <span
+        class="pf-v6-c-button__text"
+      >
+        Disconnect
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="pf-v6-c-button pf-m-secondary"
+      data-ouia-component-id="OUIA-Generated-Button-secondary-2"
+      data-ouia-component-type="PF6/Button"
+      data-ouia-safe="true"
+      type="button"
+    >
+      <span
+        class="pf-v6-c-button__text"
+      >
+        Reset
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Render SerialConsoleActions with custom texts 1`] = `
+<DocumentFragment>
+  <div
+    class="consoleActionsSerial-0-2-1"
+  >
+    <button
+      aria-disabled="false"
+      class="pf-v6-c-button pf-m-secondary"
+      data-ouia-component-id="OUIA-Generated-Button-secondary-3"
+      data-ouia-component-type="PF6/Button"
+      data-ouia-safe="true"
+      type="button"
+    >
+      <span
+        class="pf-v6-c-button__text"
+      >
+        My Disconnect Text
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="pf-v6-c-button pf-m-secondary"
+      data-ouia-component-id="OUIA-Generated-Button-secondary-4"
+      data-ouia-component-type="PF6/Button"
+      data-ouia-safe="true"
+      type="button"
+    >
+      <span
+        class="pf-v6-c-button__text"
+      >
+        My Reconnect Text
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;
