@@ -1,0 +1,53 @@
+{
+  "name": "subscription-manager",
+  "version": "0.1.0",
+  "description": "a plugin for cockpit to manage subscriptions",
+  "type": "module",
+  "main": "index.js",
+  "repository": "git@github.com:candlepin/subscription-manager-cockpit.git",
+  "author": "",
+  "license": "LGPL-2.1",
+  "scripts": {
+    "build": "./build.js",
+    "watch": "./build.js -w",
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "eslint:fix": "eslint --fix --ext .jsx --ext .js src/"
+  },
+  "devDependencies": {
+    "argparse": "2.0.1",
+    "esbuild": "0.25.0",
+    "esbuild-sass-plugin": "3.3.1",
+    "esbuild-wasm": "0.25.0",
+    "eslint": "8.57.1",
+    "eslint-config-standard": "17.1.0",
+    "eslint-config-standard-jsx": "11.0.0",
+    "eslint-config-standard-react": "13.0.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-promise": "6.6.0",
+    "eslint-plugin-react": "7.37.4",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-flowtype": "8.0.3",
+    "eslint-plugin-node": "11.1.0",
+    "gettext-parser": "8.0.0",
+    "glob": "11.0.1",
+    "htmlparser": "1.7.7",
+    "jed": "1.1.1",
+    "popper.js": "1.14.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sizzle": "2.3.10"
+  },
+  "dependencies": {
+    "@patternfly/patternfly": "6.3.1",
+    "@patternfly/react-core": "6.3.1",
+    "@patternfly/react-icons": "6.3.1",
+    "@patternfly/react-styles": "6.3.1",
+    "@patternfly/react-table": "6.3.1",
+    "@patternfly/react-tokens": "6.3.1",
+    "moment": "2.30.1"
+  },
+  "engines": {
+    "npm": "*"
+  }
+}
