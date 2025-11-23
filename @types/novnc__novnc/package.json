@@ -1,0 +1,30 @@
+{
+    "name": "@types/novnc__novnc",
+    "version": "1.5.0",
+    "description": "TypeScript definitions for @novnc/novnc",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/novnc__novnc",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Jake Jarvis",
+            "githubUsername": "jakejarvis",
+            "url": "https://github.com/jakejarvis"
+        },
+        {
+            "name": "Maksim Ovcharik",
+            "githubUsername": "ovcharik",
+            "url": "https://github.com/ovcharik"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/novnc__novnc"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typesPublisherContentHash": "0b81569f169859f4dd6e5f6a9a591c82e3d21934e974860ef287d90b7412c309",
+    "typeScriptVersion": "4.8"
+}
