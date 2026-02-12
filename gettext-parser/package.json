@@ -1,0 +1,52 @@
+{
+  "name": "gettext-parser",
+  "description": "Parse and compile gettext po and mo files to/from json, nothing more, nothing less",
+  "version": "9.0.1",
+  "author": "Andris Reinman",
+  "contributors": [
+    {
+      "name": "Sam Hauglustaine"
+    }
+  ],
+  "homepage": "http://github.com/smhg/gettext-parser",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/smhg/gettext-parser.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "eslint lib/*.js test/*.js index.js",
+    "test-generate-mo": "msgfmt test/fixtures/latin13.po -o test/fixtures/latin13.mo & msgfmt test/fixtures/utf8.po -o test/fixtures/utf8.mo & msgfmt test/fixtures/obsolete.po -o test/fixtures/obsolete.mo",
+    "test": "node --test",
+    "preversion": "npm run lint && npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "main": "./index.js",
+  "files": [
+    "lib",
+    "index.js",
+    "CHANGELOG.md"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "content-type": "^1.0.5",
+    "encoding": "^0.1.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^17.0.0"
+  },
+  "keywords": [
+    "i18n",
+    "l10n",
+    "gettext",
+    "mo",
+    "po"
+  ]
+}
